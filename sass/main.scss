@@ -12,6 +12,21 @@ $brand-danger: #f55069 !default;
 $brand-info: #000072 !default;
 $brand-warning: #ffec39 !default;
 
+$body-bg: #fff !default;
+// $text-color: $gray-base !default;
+
+// $link-color: $gray-base !default;
+// $link-hover-color: $gray-base !default;
+$link-hover-decoration: none !default;
+
+$font-family-sans-serif: "Nunito", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Lato", Georgia, "Times New Roman", Times, serif !default;
+
+$border-radius-base: 0 !default;
+$border-radius-large: 0 !default;
+$border-radius-small: 0 !default;
+$select-height: 34px !default;
+
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 body {
@@ -32,4 +47,78 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
   display: block;
 }
+.btn {
+  font-family: $font-family-serif;
+  border-radius: 3px;
+  @include transition(all 300ms ease);
+}
+.btn.btn-strong {
+    font-size: 16px;
+    padding: 1px 10px;
+    font-weight: 700;
+    margin: 30px 0;
+}
 /* Start writing sass here */
+.section {
+  position: relative;
+}
+.light {
+  color: white;
+}
+.primary {
+  color: $brand-primary;
+  &:focus, &:hover {
+    color: $brand-primary;
+  }
+}
+.danger {
+  color: $brand-danger;
+  &:focus, &:hover {
+    color: $brand-danger;
+  }
+}
+.warning {
+  color: $brand-warning;
+  &:focus, &:hover {
+    color: $brand-warning;
+  }
+}
+.success {
+  color: $brand-success;
+  &:focus, &:hover {
+    color: $brand-success;
+  }
+}
+.bg-primary {
+  background-color: $brand-primary;
+}
+.bg-danger {
+  background-color: $brand-danger;
+}
+.bg-warning {
+  background-color: $brand-warning;
+}
+.bg-success {
+  background-color: $brand-success;
+}
+.center-img {
+  display: inline-block;
+}
+.logo {
+  width: 270px;
+}
+.happy-people {
+  margin: 50px auto 0;
+  max-width: 1170px;
+
+  img {
+    width: 75%;
+  }
+}
+.centralize {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  @include transform(translateY(-50%));
+}
