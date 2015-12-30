@@ -5,6 +5,7 @@
 .text-bold {
   font-weight: bold;
 }
+button { color: transparent; }
 
 // Section 2
 .hq-features {
@@ -52,7 +53,7 @@
     button { margin-top: 100px; }
   }
 }
-.hq-about, .about-one { display: none; }
+.about-one, .about-two { display: none; }
 
 // Section 3
 .section-three {
@@ -106,5 +107,99 @@
   }
 }
 // Section 5
+.section-five {
+  font-weight: 100;
+  h2 {
+    font-size: 48px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+  }
+  .hq-table {
+    padding: 15px 20px;
+    background-color: lighten($brand-success, 5%);
+    table {
+      tr {
+        border-bottom: 2px solid darken($brand-success, 2%);
+        td {
+          padding: 10px 20px;
+          font-size: 18px;
+          letter-spacing: 1px;
+          border-right: 2px solid darken($brand-success, 2%);
+          i { font-size: 28px; }
+        }
+        td:first-child { width: 40%; }
+        td:last-child { border: none; }
+      }
+      tr:last-child { border: none; }
+    }
+  }
+}
 // Section 6
+.section-six {
+  .hq-reports {
+    font-weight: 100;
+    .hq-report-image {
+      img {
+        width: 50%;
+        margin-right: 100px;
+        float: right;
+      }
+    }
+    .hq-report-detail {
+      p { font-size: 36px; }
+      p + p { font-size: 18px; }
+    }
+  }
+}
 // Section 7
+.seven-one {
+  font-weight: 100;
+  .talk-image {
+    img { width: 75%; }
+  }
+  .talk-detail {
+    p {
+      margin-top: 20px;
+      font-size: 36px;
+    }
+    p + p {
+      margin-bottom: 50px;
+      font-size: 18px;
+    }
+    button {
+      width: 200px;
+      font-size: 16px;
+    }
+  }
+}
+.seven-two {
+  font-weight: 100;
+  .contact-section {
+    p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    .contact-form {
+      label {
+        font-size: 18px;
+        font-weight: 100;
+      }
+      input {
+        background-color: transparent;
+        border: 2px solid $brand-warning;
+        border-radius: 5px;
+      }
+    }
+    .contact-buttons {
+      button {
+        width: 49.6%;
+        font-size: 16px;
+      }
+    }
+  }
+  .contact-image {
+    width: 85%;
+    margin-top: 50px;
+  }
+}
+.seven-two { display: none; }
