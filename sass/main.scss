@@ -11,6 +11,7 @@ $brand-success: #00ac93 !default;
 $brand-danger: #f55069 !default;
 $brand-info: #000072 !default;
 $brand-warning: #ffec39 !default;
+$brand-blue: #0084c8 !default;
 
 $body-bg: #fff !default;
 // $text-color: $gray-base !default;
@@ -71,6 +72,12 @@ nav li:hover .dropdown-menu {
     color: $brand-primary;
   }
 }
+.brand-blue {
+  color: $brand-blue;
+  &:focus, &:hover {
+    color: $brand-blue;
+  }
+}
 .danger {
   color: $brand-danger;
   &:focus, &:hover {
@@ -122,3 +129,5 @@ nav li:hover .dropdown-menu {
   width: 100%;
   @include transform(translateY(-50%));
 }
+
+@import "harsh"

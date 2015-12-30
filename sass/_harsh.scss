@@ -1,0 +1,110 @@
+.get-center {
+  @include position(absolute, 50% auto auto 50%);
+  @include transform(translate(-50%, -50%));
+}
+.text-bold {
+  font-weight: bold;
+}
+
+// Section 2
+.hq-features {
+  .hq-image { margin-right: 50px; }
+  .hq-about, .about-one, .about-two {
+    font-weight: 100;
+    p { margin-bottom: 20px; }
+    .about-title { font-size: 32px; }
+    .about-buttons {
+      margin-top: 100px;
+      button {
+        width: 40%;
+        font-size: 16px;
+      }
+      button + button { width: 59%; }
+    }
+    .about-image {
+      margin-top: 50px;
+      float: right;
+      img { width: 75%; }
+    }
+  }
+  .about-one, .about-two {
+    p + p { letter-spacing: 1px; }
+    p > i { margin-right: 10px; }
+    button {
+      width: 30%;
+      margin-top: 50px;
+      font-size: 16px;
+    }
+    .about-one-image, .about-two-image {
+      img {
+        width: 50%;
+        float: right;
+      }
+    }
+    .about-two-image {
+      img {
+        margin-top: -140px;
+        width: 40%;
+      }
+    }
+  }
+  .about-two {
+    button { margin-top: 100px; }
+  }
+}
+.hq-about, .about-one { display: none; }
+
+// Section 3
+.section-three {
+  .hq-video {
+    width: 100%;
+    height: 850px;
+    background-color: #777;
+  }
+  .hq-video-detail {
+    @include transform(translate(-50%, -100%));
+    h4 {
+      font-size: 32px;
+      font-weight: 100;
+      letter-spacing: 2px;
+    }
+    h4 + h4 { margin-bottom: 30px; }
+    span {
+      display: block;
+      font-size: 80px;
+    }
+  }
+  .hq-awesome-guy {
+    position: absolute;
+    left: 10%;
+    bottom: -10%;
+    img { width: 75%; }
+  }
+}
+// Section 4
+.section-four {
+  width: 100%;
+  font-weight: 100;
+  .hq-store-blog { width: 100%; }
+  .hq-store, .hq-blog {
+    h2 { font-size: 54px; }
+    span { font-size: 18px; }
+    button {
+      width: 200px;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
+  .hq-blog {
+    h2 { margin-top: 50px; }
+  }
+  .hq-store-guy {
+    position: absolute;
+    right: 10%;
+    bottom: -5%;
+    img { width: 75%; }
+  }
+}
+// Section 5
+// Section 6
+// Section 7
