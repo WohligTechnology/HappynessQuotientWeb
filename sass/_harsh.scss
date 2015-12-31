@@ -258,6 +258,9 @@ footer {
       display: inline-block;
       line-height: 35px;
       font-size: 18px;
+      &:hover {
+        background-color: $brand-success;
+      }
     }
   }
   .footer-copyright {
