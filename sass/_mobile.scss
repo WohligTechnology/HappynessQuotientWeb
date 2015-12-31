@@ -1,4 +1,10 @@
 @media (max-width: $screen-md-max) {
+  // Section 2
+  .hq-features {
+    .hq-about {
+      .about-title { font-size: 28px; }
+    }
+  }
   // Section 4
   .section-four {
     .hq-store-guy {
@@ -80,7 +86,7 @@
       table {
         tr {
           td {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
