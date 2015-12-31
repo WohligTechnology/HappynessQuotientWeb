@@ -65,6 +65,9 @@ nav li:hover .dropdown-menu {
 }
 .light {
   color: white;
+  &:focus, &:hover {
+    color: white;
+  }
 }
 .dark {
   color: black;
@@ -136,4 +139,5 @@ nav li:hover .dropdown-menu {
   @include transform(translateY(-50%));
 }
 
-@import "harsh"
+@import "harsh";
+@import "mobile";

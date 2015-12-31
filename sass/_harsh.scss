@@ -21,7 +21,7 @@ button { color: transparent; }
 .hq-features {
   .hq-image { margin-right: 50px; }
   .hq-about, .about-one, .about-two {
-    font-weight: 100;
+    font-weight: 400;
     p { margin-bottom: 20px; }
     .about-title { font-size: 32px; }
     .about-buttons {
@@ -76,7 +76,7 @@ button { color: transparent; }
     @include transform(translate(-50%, -100%));
     h4 {
       font-size: 32px;
-      font-weight: 100;
+      font-weight: 400;
       letter-spacing: 2px;
     }
     h4 + h4 { margin-bottom: 30px; }
@@ -95,7 +95,7 @@ button { color: transparent; }
 // Section 4
 .section-four {
   width: 100%;
-  font-weight: 100;
+  font-weight: 400;
   .hq-store-blog { width: 100%; }
   .hq-store, .hq-blog {
     h2 { font-size: 54px; }
@@ -113,12 +113,15 @@ button { color: transparent; }
     position: absolute;
     right: 10%;
     bottom: -5%;
-    img { width: 75%; }
+    img {
+      width: 75%;
+      float: right;
+    }
   }
 }
 // Section 5
 .section-five {
-  font-weight: 100;
+  font-weight: 400;
   h2 {
     font-size: 48px;
     letter-spacing: 1px;
@@ -147,7 +150,7 @@ button { color: transparent; }
 // Section 6
 .section-six {
   .hq-reports {
-    font-weight: 100;
+    font-weight: 400;
     .hq-report-image {
       img {
         width: 50%;
@@ -163,7 +166,7 @@ button { color: transparent; }
 }
 // Section 7
 .seven-one {
-  font-weight: 100;
+  font-weight: 400;
   .talk-image {
     img { width: 75%; }
   }
@@ -183,7 +186,7 @@ button { color: transparent; }
   }
 }
 .seven-two {
-  font-weight: 100;
+  font-weight: 400;
   .contact-section {
     p {
       font-size: 20px;
@@ -192,7 +195,7 @@ button { color: transparent; }
     .contact-form {
       label {
         font-size: 18px;
-        font-weight: 100;
+        font-weight: 400;
       }
       input {
         background-color: transparent;

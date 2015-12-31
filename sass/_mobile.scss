@@ -1,0 +1,85 @@
+// Section 2
+// Section 3
+// Section 4
+// Section 5
+// Section 6
+// Section 7
+// Footer
+
+@media (max-width: $screen-md-max) {
+  // Section 4
+  .section-four {
+    .hq-store-guy {
+      right: 5%;
+      bottom: -5%;
+      img {
+        width: 60%;
+        float: right;
+      }
+    }
+  }
+}
+@media (max-width: $screen-sm-max) {
+  button { font-size: 14px; }
+  // Section 2
+  .hq-image {
+    img {
+      width: 15%;
+    }
+  }
+  // Section 3
+  // Section 4
+  .section-four {
+    .hq-store h2, .hq-blog h2 { font-size: 40px; }
+    .hq-store span { font-size: 14px; }
+    .hq-store-guy {
+      right: 5%;
+      bottom: 25%;
+      img {
+        width: 50%;
+        float: right;
+      }
+    }
+  }
+  // Section 5
+  // Section 6
+  .section-six {
+    .hq-reports {
+      .hq-report-detail {
+        p { font-size: 24px; }
+        p + p { font-size: 14px; }
+      }
+    }
+  }
+  // Section 7
+  .section-seven {
+    .talk-image {
+      margin-bottom: 50px;
+      img {
+        width: 40%;
+        margin: 0 auto;
+      }
+    }
+    .talk-detail {
+      p { font-size: 28px; }
+      p + p { font-size: 14px; }
+    }
+  }
+  // Footer
+  footer {
+    text-align: center;
+    .about-us {
+      margin-bottom: 30px;
+      span { margin: 0; }
+    }
+    .footer-links-two {
+      .visit { margin: 0; }
+    }
+    .footer-copyright {
+      p { padding: 0 20px; }
+    }
+  }
+}
+@media (max-width: $screen-xs-max) {
+
+}
