@@ -5,7 +5,6 @@
 .text-bold {
   font-weight: bold;
 }
-button { color: transparent; }
 .btn-green {
   @include button-variant($brand-success, $brand-primary, $brand-primary);
 }
@@ -194,7 +193,8 @@ button { color: transparent; }
     }
     .contact-form {
       label {
-        font-size: 18px;
+        margin-top: 5px;
+        font-size: 16px;
         font-weight: 400;
       }
       input {
@@ -211,8 +211,10 @@ button { color: transparent; }
     }
   }
   .contact-image {
-    width: 85%;
-    margin-top: 50px;
+    img {
+      width: 85%;
+      margin-top: 50px;
+    }
   }
 }
 .seven-two { display: none; }
