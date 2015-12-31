@@ -6,6 +6,16 @@
   font-weight: bold;
 }
 button { color: transparent; }
+.btn-green {
+  @include button-variant($brand-success, $brand-primary, $brand-primary);
+}
+.btn-pink {
+  @include button-variant($brand-danger, $brand-primary, $brand-primary);
+}
+.btn-pink2 {
+  padding: 2px 50px;
+  @include button-variant(white, $brand-danger, $brand-danger);
+}
 
 // Section 2
 .hq-features {
@@ -203,3 +213,55 @@ button { color: transparent; }
   }
 }
 .seven-two { display: none; }
+
+// Footer
+footer {
+  margin: 100px 0 50px 0;
+  .about-us {
+    span {
+      margin-bottom: 10px;
+      display: block;
+    }
+    span:first-child { font-weight: bold; }
+    span:last-child { margin: 0; }
+  }
+  .footer-links-one {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .footer-links-two {
+    font-weight: bold;
+    .visit { margin-left: 30px; }
+  }
+  .mobile-store {
+    margin: 50px 0;
+    .play-store, .app-store {
+      display: inline-block;
+      img {
+        width: 80%;
+        display: inline-block;
+      }
+    }
+  }
+  .subscribe { margin-bottom: 20px; }
+  .social-links {
+    margin: 20px 0;
+    a {
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      display: inline-block;
+      line-height: 35px;
+      font-size: 18px;
+    }
+  }
+  .footer-copyright {
+    width: 70%;
+    margin: 0 auto;
+    p { padding: 0 90px; }
+    hr {
+      border-color: black;
+      margin: 10px 0;
+    }
+  }
+}

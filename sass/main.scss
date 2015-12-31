@@ -66,6 +66,12 @@ nav li:hover .dropdown-menu {
 .light {
   color: white;
 }
+.dark {
+  color: black;
+  &:focus, &:hover {
+    color: black;
+  }
+}
 .primary {
   color: $brand-primary;
   &:focus, &:hover {
