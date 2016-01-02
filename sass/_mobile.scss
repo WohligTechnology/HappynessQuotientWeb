@@ -110,9 +110,9 @@
   // Section 7
   .section-seven {
     .talk-image {
-      margin-bottom: 50px;
+      margin-top: 50px;
       img {
-        width: 50%;
+        width: 75%;
         margin: 0 auto;
       }
     }
@@ -249,6 +249,10 @@
       .talk-detail {
         button { font-size: 14px; }
       }
+      .talk-image {
+        margin-bottom: 50px;
+        img { width: 50%; }
+      }
     }
     .seven-two {
       .contact-section {
@@ -268,6 +272,7 @@
     .contact-image {
       img {
         width: 30%;
+        margin-top: 20px;
         float: right;
       }
     }
@@ -276,6 +281,7 @@
   footer {
     .mobile-store {
       .play-store { margin-bottom: 10px; }
+      .app-store { margin-bottom: 10px; }
       .play-store, .app-store {
         img {
           width: 50%;
@@ -286,6 +292,118 @@
       width: 90%;
       font-size: 12px;
       p { padding: 0 10px; }
+    }
+  }
+}
+
+
+// /////////////////////////
+// LANDSCAPE
+// /////////////////////////
+
+@media (max-width: $screen-md-max) and (orientation: landscape) {
+  .section-two {
+    margin: 20px 0;
+  }
+  .hq-features {
+    .hq-about, .about-one, .about-two {
+      .about-buttons { margin-top: 50px; }
+    }
+    .about-one {
+      .about-one-image { margin-top: -50px; }
+    }
+    .about-two {
+      button { margin-top: 50px; }
+      .about-two-image { img {
+        width: 30%;
+        margin-top: -100px;
+      } }
+    }
+  }
+  .section-five {
+    h2 { font-size: 40px; }
+    .hq-table { table { tr { td { font-size: 16px; } } } }
+  }
+}
+
+@media (max-width: $screen-sm-max) and (orientation: landscape) {
+  .section-two {
+    margin: 0;
+  }
+  .hq-store-blog {
+    margin: 0px 0;
+    .hq-store, .hq-blog {
+      h2 { font-size: 28px; }
+      button {
+        width: 20%;
+        margin-top: 10px;
+      }
+    }
+    .hq-blog {
+      h2 { margin-top: 20px; }
+    }
+  }
+  // Section 6
+  .section-six {
+    .hq-reports {
+      .hq-report-image {
+        img {
+          width: 10%;
+          float: left;
+        }
+      }
+      .hq-report-detail { margin-top: 10px; }
+    }
+  }
+  // Section 5
+  .section-five {
+    h2 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+    .hq-table {
+      padding: 2px;
+      table { tr { td {
+      padding: 5px 12px;
+      font-size: 14px;
+    } } } }
+  }
+  // Section 7
+  .section-seven {
+    .seven-one {
+      .talk-image {
+        margin: 0;
+        img {
+          width: 15%;
+          float: left;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .seven-two {
+      .contact-section {
+        p { margin: 0; }
+        .contact-form {
+          .form-group {
+            margin: 0;
+            label {
+              margin: 0;
+              font-size: 12px;
+            }
+            input {
+              height: 25px;
+              margin: 2px 0;
+            }
+          }
+          .form-group:last-child { margin-bottom: 10px; }
+        }
+        .contact-buttons { button { padding: 4px 0; } }
+      }
+      .contact-image { display: none; }
+    }
+    .talk-detail {
+      p { font-size: 20px; }
+      p + p { margin-bottom: 20px; }
     }
   }
 }

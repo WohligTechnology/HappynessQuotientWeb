@@ -1,23 +1,23 @@
 <div class="section-seven get-center">
-  <div class="seven-one">
+  <div class="seven-one seven-animate" ng-hide="talk">
     <div class="container">
       <div class="row">
-        <div class="col-md-offset-1 col-md-6 col-sm-12">
+        <div class="col-md-offset-1 col-md-6 col-sm-5 col-xs-12">
           <div class="talk-image">
             <img src="img/section7/1.png" alt="" class="img-responsive" />
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 col-sm-7">
           <div class="talk-detail">
             <p class="text-left warning">Let's Talk</p>
             <p class="text-justify light">A happier workforce stays longer and is more productive. Interested to find out if measuring employee happyness is really easy and fun to do? Ask for a demo!</p>
-            <button class="btn btn-green text-center" type="button">Click here</button>
+            <button class="btn btn-green text-center" type="button" ng-click="talk=true">Click here</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="seven-two">
+  <div class="seven-two seven-animate" ng-show="talk">
     <div class="container">
       <div class="row">
         <div class="col-md-offset-2 col-md-6 col-sm-12">
@@ -53,7 +53,7 @@
             </div>
             <div class="contact-buttons">
               <button class="btn btn-green text-center" type="button">Send</button>
-              <button class="btn btn-green text-center" type="button">Back</button>
+              <button class="btn btn-green text-center" type="button" ng-click="talk=false">Back</button>
             </div>
           </div>
         </div>

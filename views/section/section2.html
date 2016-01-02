@@ -8,7 +8,7 @@
           </div>
         </div>
         <div class="col-md-7 col-sm-12 col-xs-12">
-          <div class="hq-about">
+          <div class="hq-about" ng-hide="measure || unique">
             <p class="about-title text-left primary">What's Happyness Quotient all about?</p>
             <p class="text-justify light">Happyness Quotient<sup>TM</sup> is an
               <span class="text-bold">innovative</span> and
@@ -22,15 +22,15 @@
               <span class="text-bold">what matters to your company.</span>
             </p>
             <div class="about-buttons">
-              <button type="button" class="btn btn-pink">Why Measure Happyness?</button>
-              <button type="button" class="btn btn-pink">What's unique about Happyness Quotient?</button>
+              <button type="button" class="btn btn-pink" ng-click="measure=true">Why Measure Happyness?</button>
+              <button type="button" class="btn btn-pink" ng-click="unique=true">What's unique about Happyness Quotient?</button>
             </div>
             <div class="about-image">
               <img src="img/section2/1.png" alt="" class="img-responsive" />
             </div>
           </div>
 
-          <div class="about-one">
+          <div class="about-one" ng-show="measure">
             <p class="about-title primary">Why measure Happyness?</p>
             <p class="text-left light">With an ever evolving workforce and increasing competition, measuring engagement levels alone may no longer be adequate. Since different things matter to different individuals across gender, age groups and seniority levels, measuring overall
               happyness levels and understanding professional choices can give organizations a
@@ -41,13 +41,13 @@
               <span class="text-bold">accountability</span> and
               <span class="text-bold">measurability</span> to areas that may earlier seem subjective. After all, it is only by figuring out what truly drives their workforce can organizations build strategies that help them stay ahead of the curve.
             </p>
-            <button type="button" class="btn btn-pink">Back</button>
+            <button type="button" class="btn btn-pink" ng-click="measure=false">Back</button>
             <div class="about-one-image">
               <img src="img/section2/2.png" alt="" class="img-responsive" />
             </div>
           </div>
 
-          <div class="about-two">
+          <div class="about-two"  ng-show="unique">
             <p class="about-title primary">What's unique about Happyness Quotient?</p>
             <p class="light"><i class="fa fa-check warning"></i>Pillars rooted in people behaviour.</p>
             <p class="light"><i class="fa fa-check warning"></i>Customized to suit company values and business objectives and business objectives.</p>
@@ -59,7 +59,7 @@
             <p class="light"><i class="fa fa-check warning"></i>Customizable weightages.</p>
             <p class="light"><i class="fa fa-check warning"></i>Option to add a core pillar.</p>
             <p class="light"><i class="fa fa-check warning"></i>Centrally run &amp; manage mini surveys throughout the year.</p>
-            <button type="button" class="btn btn-pink">Back</button>
+            <button type="button" class="btn btn-pink" ng-click="unique=false">Back</button>
             <div class="about-two-image">
               <img src="img/section2/3.png" alt="" class="img-responsive" />
             </div>
