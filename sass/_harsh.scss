@@ -18,10 +18,6 @@
   padding: 2px 50px;
   @include button-variant(white, $brand-danger, $brand-danger);
 }
-//Section 1
-.pattern-red { background-color: $brand-danger; }
-.pattern-red2 { @include position(absolute, 0 auto auto auto); }
-.pattern-green { background-color: $brand-success; }
 // Section 2
 .hq-features {
   .hq-image {
@@ -98,7 +94,9 @@
   .hq-awesome-guy {
     position: absolute;
     left: 10%;
-    bottom: -10%;
+    @include transform(translateY(30%));
+    z-index: 9;
+    bottom: 0;
     img { width: 75%; }
   }
 }
@@ -106,10 +104,10 @@
 .section-four {
   width: 100%;
   font-weight: 400;
-  .hq-store-blog { width: 100%; }
+  .hq-store-blog { width: 100%; padding-top: 10%; }
   .hq-store, .hq-blog {
     h2 {
-      font-size: 54px;
+      font-size: 44px;
       font-weight: 100;
     }
     span { font-size: 18px; }
@@ -125,7 +123,7 @@
   .hq-store-guy {
     position: absolute;
     right: 10%;
-    bottom: -5%;
+    bottom: 10%;
     img {
       width: 75%;
       float: right;
@@ -136,9 +134,10 @@
 .section-five {
   font-weight: 400;
   h2 {
-    font-size: 48px;
+    font-size: 44px;
     letter-spacing: 1px;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 30px;
   }
   .hq-table {
     padding: 15px 20px;
@@ -148,7 +147,7 @@
         border-bottom: 2px solid darken($brand-success, 2%);
         td {
           padding: 10px 20px;
-          font-size: 18px;
+          font-size: 16px;
           letter-spacing: 1px;
           border-right: 2px solid darken($brand-success, 2%);
           i { font-size: 28px; }
@@ -172,8 +171,8 @@
       }
     }
     .hq-report-detail {
-      p { font-size: 36px; }
-      p + p { font-size: 18px; }
+      p { font-size: 32px; }
+      p + p { font-size: 16px; }
     }
   }
 }
@@ -186,11 +185,11 @@
   .talk-detail {
     p {
       margin-top: 20px;
-      font-size: 36px;
+      font-size: 32px;
     }
     p + p {
       margin-bottom: 50px;
-      font-size: 18px;
+      font-size: 16px;
     }
     button {
       width: 200px;
