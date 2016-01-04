@@ -19,10 +19,9 @@
   @include button-variant(white, $brand-danger, $brand-danger);
 }
 //Section 1
-.pattern {
-  @include position(absolute, auto auto -70px auto);
-  z-index: 1;
-}
+.pattern-red { background-color: $brand-danger; }
+.pattern-red2 { @include position(absolute, 0 auto auto auto); }
+.pattern-green { background-color: $brand-success; }
 // Section 2
 .hq-features {
   .hq-image {
