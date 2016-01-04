@@ -139,6 +139,9 @@ nav li:hover .dropdown-menu {
   width: 100%;
   @include transform(translateY(-50%));
 }
+.menu-circle {
+  
+}
 
 @import "harsh";
 @import "mobile";
