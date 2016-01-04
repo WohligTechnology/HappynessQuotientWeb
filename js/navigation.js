@@ -2,14 +2,45 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function() {
   var navigation = [{
-    name: "Home",
+    name: "About Us Happyness Quotient",
     classis: "active",
-    link: "#/home",
-    subnav: [{
-      name: "Subnav1",
-      classis: "active",
-      link: "#/home"
-    }]
+    link: "#/about",
+    subnav: []
+  }, {
+    name: "Watch Video",
+    classis: "active",
+    link: "#/watch",
+    subnav: []
+  }, {
+    name: "Whats In Store",
+    classis: "active",
+    link: "#/store",
+    subnav: []
+  }, {
+    name: "How is Happyness Quotient Different",
+    classis: "active",
+    link: "#/different",
+    subnav: []
+  }, {
+    name: "Whats next",
+    classis: "active",
+    link: "#/next",
+    subnav: []
+  }, {
+    name: "Lets Talk",
+    classis: "active",
+    link: "#/talk",
+    subnav: []
+  }, {
+    name: "Visit Never Grow Up®",
+    classis: "active",
+    link: "http://www.willnevergrowup.com/",
+    subnav: []
+  }, {
+    name: "Visit Our Blog",
+    classis: "active",
+    link: "#/blog",
+    subnav: []
   }];
 
   return {

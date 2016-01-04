@@ -1,5 +1,5 @@
-<!-- <div class="template menu" ng-include="template.menu"></div> -->
-<div class="menu-circle">
+<div class="template menu" ng-class="{'show': showMenu == true}" ng-include="template.menu"></div>
+<div class="menu-circle" ng-class="{'closer': showMenu == true}" ng-click="showMenu = !showMenu;">
   <span class="bar bar1"></span>
   <span class="bar bar2"></span>
   <span class="bar bar3"></span>
