@@ -5,20 +5,30 @@
 .text-bold {
   font-weight: bold;
 }
+.btn-primary { font-weight: bold; }
 .btn-green {
+  font-weight: bold;
   @include button-variant($brand-success, $brand-primary, $brand-primary);
 }
 .btn-pink {
+  font-weight: bold;
   @include button-variant($brand-danger, $brand-primary, $brand-primary);
 }
 .btn-pink2 {
   padding: 2px 50px;
   @include button-variant(white, $brand-danger, $brand-danger);
 }
-
+//Section 1
+.pattern {
+  @include position(absolute, auto auto -70px auto);
+  z-index: 1;
+}
 // Section 2
 .hq-features {
-  .hq-image { margin-right: 50px; }
+  .hq-image {
+    margin-right: 50px;
+    padding: 20px;
+  }
   .hq-about, .about-one, .about-two {
     font-weight: 400;
     p { margin-bottom: 20px; }
@@ -47,14 +57,14 @@
     }
     .about-one-image, .about-two-image {
       img {
-        width: 50%;
+        width: 40%;
         float: right;
       }
     }
     .about-two-image {
       img {
-        margin-top: -140px;
-        width: 40%;
+        margin-top: -150px;
+        width: 35%;
       }
     }
   }
@@ -68,19 +78,22 @@
   .hq-video {
     width: 100%;
     height: 850px;
-    background-color: #777;
+    background-image: url(../img/section3/1.jpg);
+    background-size: cover;
+    background-position: center center;
   }
   .hq-video-detail {
-    @include transform(translate(-50%, -100%));
+    @include transform(translate(-50%, -70%));
     h4 {
-      font-size: 32px;
+      margin-bottom: 30px;
+      font-size: 40px;
       font-weight: 400;
       letter-spacing: 2px;
+      text-shadow: 0px 0px 100px black;
     }
-    h4 + h4 { margin-bottom: 30px; }
     span {
       display: block;
-      font-size: 80px;
+      font-size: 120px;
     }
   }
   .hq-awesome-guy {
@@ -96,7 +109,10 @@
   font-weight: 400;
   .hq-store-blog { width: 100%; }
   .hq-store, .hq-blog {
-    h2 { font-size: 54px; }
+    h2 {
+      font-size: 54px;
+      font-weight: 100;
+    }
     span { font-size: 18px; }
     button {
       width: 200px;
@@ -267,6 +283,7 @@ footer {
   .footer-copyright {
     width: 70%;
     margin: 0 auto;
+    font-size: 12px;
     p { padding: 0 90px; }
     hr {
       border-color: black;
