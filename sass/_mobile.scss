@@ -206,13 +206,15 @@
 
   // Section 5
   .section-five {
-    width: 90%;
+    width: 100%;
     h2 {
       margin-bottom: 20px;
       font-size: 20px;
     }
     .hq-table {
       padding: 10px;
+      overflow-x: scroll;
+
       table {
         zoom: 0.6;
         tr {
