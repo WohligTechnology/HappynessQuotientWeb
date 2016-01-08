@@ -1,5 +1,5 @@
 <ul class="list-unstyled">
-    <li ng-repeat="menu in navigation" class="{{menu.classis}}">
-        <a href="{{menu.link}}">{{menu.name}}</a>
-    </li>
+  <li class="{{menu.classis}}" ng-repeat="menu in navigation">
+    <a href="#{{menu.link}}" du-scrollspy du-smooth-scroll ng-click="showMenu = true;">{{menu.name}}</a>
+  </li>
 </ul>

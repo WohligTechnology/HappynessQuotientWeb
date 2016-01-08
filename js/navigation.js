@@ -4,32 +4,32 @@ var navigationservice = angular.module('navigationservice', [])
   var navigation = [{
     name: "About Happyness Quotient",
     classis: "active",
-    link: "#/about",
+    link: "about",
     subnav: []
   }, {
     name: "Watch Video",
     classis: "active",
-    link: "#/watch",
+    link: "watch",
     subnav: []
   }, {
     name: "Whats In Store",
     classis: "active",
-    link: "#/store",
+    link: "store",
     subnav: []
   }, {
     name: "How is Happyness Quotient Different",
     classis: "active",
-    link: "#/different",
+    link: "different",
     subnav: []
   }, {
     name: "Whats next",
     classis: "active",
-    link: "#/next",
+    link: "next",
     subnav: []
   }, {
     name: "Lets Talk",
     classis: "active",
-    link: "#/talk",
+    link: "talk",
     subnav: []
   }, {
     name: "Visit Never Grow Up®",

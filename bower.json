@@ -28,7 +28,8 @@
     "jquery": "~2.1.4",
     "lodash": "~3.10.0",
     "ui-router": "~0.2.15",
-    "angular-animate": "~1.4.6"
+    "angular-animate": "~1.4.6",
+    "angular-scroll": "~1.0.0"
   },
   "resolutions": {
     "angular": "1.4.8"
