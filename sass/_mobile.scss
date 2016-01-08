@@ -32,6 +32,9 @@
   // Section 2
   .hq-image {
     margin-bottom: 20px;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+
     img {
       width: 15%;
     }
@@ -202,7 +205,7 @@
       display: none;
     }
     .hq-store-blog {
-      padding-top: 40%;
+      padding-top: 30%;
     }
   }
 
