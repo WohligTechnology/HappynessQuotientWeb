@@ -167,6 +167,11 @@ nav li:hover .dropdown-menu {
       max-width: 230px;
       text-align: center;
       margin: 0 auto;
+      @include transition(all 300ms ease);
+
+      &.active {
+        color: $brand-danger;
+      }
     }
 }
 .menu-circle {
@@ -180,6 +185,24 @@ nav li:hover .dropdown-menu {
   z-index: 9999;
   border-radius: 100%;
   cursor: pointer;
+  text-align: center;
+
+  .hide-it {
+    opacity: 0;
+  }
+  .show-it {
+    opacity: 1;
+  }
+
+  i.fa-angle-up {
+    color: white;
+    font-size: 35px;
+    line-height: 23px;
+  }
+  &.bottom {
+    top: auto;
+    bottom: 35px;
+  }
 
   .bar {
     display: block;

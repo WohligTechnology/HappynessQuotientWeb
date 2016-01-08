@@ -1,6 +1,10 @@
 <div class="template menu" ng-class="{'show': showMenu == true}" ng-include="template.menu"></div>
-<div class="menu-circle" ng-class="{'closer': showMenu == true}" ng-click="showMenu = !showMenu;">
+<div class="menu-circle" ng-class="{'closer': showMenu == true}" ng-click="toggleMenu();">
   <span class="bar bar1"></span>
   <span class="bar bar2"></span>
   <span class="bar bar3"></span>
 </div>
+
+<!-- <div class="menu-circle bottom hide-it" ng-click="toTheTop();">
+<i class="fa fa-angle-up"></i>
+</div> -->
