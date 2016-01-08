@@ -17,22 +17,22 @@ var navigationservice = angular.module('navigationservice', [])
     link: "watch",
     subnav: []
   }, {
-    name: "Whats In Store",
+    name: "What's In Store",
     classis: "active",
     link: "store",
     subnav: []
   }, {
-    name: "How is Happyness Quotient Different",
+    name: "How is Happyness Quotient Different?",
     classis: "active",
     link: "different",
     subnav: []
   }, {
-    name: "Whats next",
+    name: "What's next?",
     classis: "active",
     link: "next",
     subnav: []
   }, {
-    name: "Lets Talk",
+    name: "Let's Talk",
     classis: "active",
     link: "talk",
     subnav: []
