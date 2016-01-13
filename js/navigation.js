@@ -2,11 +2,6 @@ var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function() {
   var navigation = [{
-    name: "About Us",
-    classis: "active",
-    link: "about",
-    subnav: []
-  }, {
     name: "Happyness Quotient",
     classis: "active",
     link: "happyness",
@@ -45,6 +40,11 @@ var navigationservice = angular.module('navigationservice', [])
     name: "Visit Our Blog",
     classis: "active",
     link: "#/blog",
+    subnav: []
+  }, {
+    name: "About Us",
+    classis: "active",
+    link: "http://www.willnevergrowup.com/about.html",
     subnav: []
   }];
 
