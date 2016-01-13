@@ -3,20 +3,22 @@
 
 <head ng-controller="headerctrl">
     <meta charset="utf-8">
+    <!-- <base href="http://www.wohlig.co.in/hqweb/"> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script>
+      var isproduction=true;
+    </script>
 
     <title ng-bind="'Happyness Quotient - '+template.title">Happyness Quotient</title>
 
     <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="stylesheet" type="text" href="w.css" />
     <script src="w.js"></script>
-    <script>
-      var isproduction=true;
-    </script>
+
     <!--[if IE]>
         <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>

@@ -6,23 +6,28 @@ var firstapp = angular.module('firstapp', [
   'navigationservice'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
   // for http request with session
   $httpProvider.defaults.withCredentials = true;
 
-  $stateProvider
-
-    .state('home', {
+  $stateProvider.state('home', {
       url: "/home",
       templateUrl: "views/template.html",
       controller: 'HomeCtrl'
     })
+    .state('homeid', {
+        url: "/home/:id",
+        templateUrl: "views/template.html",
+        controller: 'HomeCtrl'
+      })
     .state('store', {
       url: "/store",
       templateUrl: "views/template.html",
       controller: 'StoreCtrl'
-    })
+    });
+
+  // $locationProvider.html5Mode(true);
 
   $urlRouterProvider.otherwise("/home");
 

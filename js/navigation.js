@@ -4,32 +4,32 @@ var navigationservice = angular.module('navigationservice', [])
   var navigation = [{
     name: "Happyness Quotient",
     classis: "active",
-    link: "happyness",
+    anchor: "happyness",
     subnav: []
   }, {
     name: "Watch Video",
     classis: "active",
-    link: "watch",
+    anchor: "watch",
     subnav: []
   }, {
     name: "What's In Store",
     classis: "active",
-    link: "store",
+    anchor: "store",
     subnav: []
   }, {
     name: "How is Happyness Quotient Different?",
     classis: "active",
-    link: "different",
+    anchor: "different",
     subnav: []
   }, {
     name: "What's next?",
     classis: "active",
-    link: "next",
+    anchor: "next",
     subnav: []
   }, {
     name: "Let's Talk",
     classis: "active",
-    link: "talk",
+    anchor: "talk",
     subnav: []
   }, {
     name: "Visit Never Grow Up®",
@@ -68,5 +68,5 @@ var navigationservice = angular.module('navigationservice', [])
       return menuname;
     },
 
-  }
+  };
 });
