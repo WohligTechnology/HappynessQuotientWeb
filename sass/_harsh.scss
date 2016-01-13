@@ -7,6 +7,7 @@
   }
 }
 h2 { font-size: 36px; }
+span, p, a, table tr td, .btn { font-size: 14px; }
 .get-center {
   @include position(absolute, 50% auto auto 50%);
   @include transform(translate(-50%, -50%));
@@ -15,23 +16,18 @@ h2 { font-size: 36px; }
   font-weight: bold;
 }
 .btn, a {
+  padding: 1px 0;
+  font-weight: bold;
   &:active { box-shadow: none; }
   &:focus { outline: none; }
   &:active:focus { outline: none; }
 }
 .btn-primary { font-weight: bold; }
-.btn-green {
-  padding: 1px 0;
-  font-weight: bold;
-  @include button-variant($brand-success, $brand-primary, $brand-primary);
-}
-.btn-pink {
-  padding: 1px 0;
-  font-weight: bold;
-  @include button-variant($brand-danger, $brand-primary, $brand-primary);
-}
+.btn-white { @include button-variant($body-bg, $brand-primary, $brand-primary); }
+.btn-green { @include button-variant($brand-success, $brand-primary, $brand-primary); }
+.btn-pink { @include button-variant($brand-danger, $brand-primary, $brand-primary); }
 .btn-pink2 {
-  padding: 1px 50px;
+  padding: 0 20px;
   @include button-variant(white, $brand-danger, $brand-danger);
 }
 // Section 2
@@ -42,16 +38,10 @@ h2 { font-size: 36px; }
   }
   .hq-about, .about-one, .about-two {
     font-weight: 400;
-    p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
+    p { margin-bottom: 20px; }
     .about-buttons {
       margin-top: 100px;
-      button {
-        width: 40%;
-        font-size: 16px;
-      }
+      button { width: 40%; }
       button + button { width: 59%; }
     }
     .about-image {
@@ -66,7 +56,6 @@ h2 { font-size: 36px; }
     button {
       width: 30%;
       margin-top: 50px;
-      font-size: 16px;
     }
     .about-one-image, .about-two-image {
       img {
@@ -124,12 +113,9 @@ h2 { font-size: 36px; }
   .hq-store-blog { width: 100%; padding-top: 10%; }
   .hq-store, .hq-blog {
     h2 { font-weight: 100; }
-    span { font-size: 16px; }
-    button {
+    a {
       width: 200px;
       margin-top: 20px;
-      padding: 1px 0;
-      font-size: 16px;
     }
   }
   .hq-blog {
@@ -161,7 +147,6 @@ h2 { font-size: 36px; }
         border-bottom: 2px solid darken($brand-success, 2%);
         td {
           padding: 10px 20px;
-          font-size: 16px;
           letter-spacing: 1px;
           border-right: 2px solid darken($brand-success, 2%);
           i { font-size: 28px; }
@@ -184,9 +169,6 @@ h2 { font-size: 36px; }
         float: right;
       }
     }
-    .hq-report-detail {
-      p { font-size: 16px; }
-    }
   }
 }
 // Section 7
@@ -197,14 +179,8 @@ h2 { font-size: 36px; }
   }
   .talk-detail {
     h2 { margin-top: 20px; }
-    p {
-      margin-bottom: 50px;
-      font-size: 16px;
-    }
-    button {
-      width: 200px;
-      font-size: 16px;
-    }
+    p { margin-bottom: 50px; }
+    button { width: 200px; }
   }
 }
 .seven-two {
@@ -227,10 +203,7 @@ h2 { font-size: 36px; }
       }
     }
     .contact-buttons {
-      button {
-        width: 49.6%;
-        font-size: 16px;
-      }
+      button { width: 49.6%; }
     }
   }
   .contact-image {
@@ -328,6 +301,52 @@ footer {
     margin: 0 auto;
     display: block;
   }
+}
+.store-table {
+  margin: 50px 0;
+  h2 { margin: 20px 0; }
+  table {
+    tbody { background-color: darken($brand-blue, 5%); }
+    tr {
+      border-top: 2px solid lighten($brand-blue, 2%);
+      td, th {
+        padding: 20px 50px;
+        border: none;
+        i {
+          padding-top: 10px;
+          font-size: 32px;
+        }
+      }
+      th, th.warning {
+        background-color: transparent;
+        font-weight: normal;
+      }
+      td:first-child, th:first-child {
+        width: 30%;
+        vertical-align: middle;
+      }
+    }
+    thead { font-size: 24px; }
+    tr:first-child { border: none; }
+  }
+}
+.store-plans, .store-more {
+  position: relative;
+  margin-bottom: 60px;
+  h2 { margin-bottom: 30px; }
+  span, p {
+    margin-bottom: 8px;
+    display: block;
+  }
+  .plan-image {
+    @include position(absolute, 25% 0 0 auto);
+    img { width: 75%; }
+  }
+  .uline { border-bottom: 1px solid $body-bg; }
+}
+.store-more {
+  margin-bottom: 40px;
+  span { display: inline-block; }
 }
 
 

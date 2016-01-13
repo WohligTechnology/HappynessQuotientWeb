@@ -27,6 +27,8 @@
       }
     }
   }
+  // Store
+  .store-table table thead { font-size: 20px; }
 }
 @media (max-width: $screen-sm-max) {
   // Section 2
@@ -152,6 +154,14 @@
         padding: 0 20px;
       }
     }
+  }
+
+  // Store
+  .store-table table tr td, .store-table table tr th { padding: 20px; }
+  .store-table table tr td:first-child { width: 30%; }
+  .store-plans .plan-image {
+    @include position(absolute, 50% 0 0 auto);
+    img { width: 50%; }
   }
 }
 @media (max-width: $screen-xs-max) {
@@ -301,6 +311,16 @@
       p { padding: 0 10px; }
     }
   }
+  // Store
+  .store-table h2 { font-size: 24px; }
+  .store-plans h2, .store-more h2 { font-size: 24px; }
+  .store-main { span, p { font-size: 14px; } }
+  .store-table table tr td, .store-table table tr th {
+    padding: 10px 15px;
+    font-size: 14px;
+    & > i { font-size: 18px; }
+  }
+  .store-plans .plan-image { display: none; }
 }
 
 

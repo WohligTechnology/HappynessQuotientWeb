@@ -39,12 +39,17 @@ var navigationservice = angular.module('navigationservice', [])
   }, {
     name: "Visit Our Blog",
     classis: "active",
-    link: "#/blog",
+    link: "/blog",
     subnav: []
   }, {
     name: "About Us",
     classis: "active",
     link: "http://www.willnevergrowup.com/about.html",
+    subnav: []
+  }, {
+    name: "Store",
+    classis: "active",
+    link: "/store",
     subnav: []
   }];
 
