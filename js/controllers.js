@@ -19,6 +19,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     seven: "views/section/section7.html"
   };
 })
+.controller('StoreCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  //Used to name the .html file
+  $scope.template = TemplateService.changecontent("store");
+  $scope.menutitle = NavigationService.makeactive("Store");
+  TemplateService.title = $scope.menutitle;
+  $scope.navigation = NavigationService.getnav();
+})
 
 .controller('headerctrl', function($scope, TemplateService) {
   $scope.template = TemplateService;

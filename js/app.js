@@ -14,10 +14,15 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
   $stateProvider
 
     .state('home', {
-    url: "/home",
-    templateUrl: "views/template.html",
-    controller: 'HomeCtrl'
-  })
+      url: "/home",
+      templateUrl: "views/template.html",
+      controller: 'HomeCtrl'
+    })
+    .state('store', {
+      url: "/store",
+      templateUrl: "views/template.html",
+      controller: 'StoreCtrl'
+    })
 
   $urlRouterProvider.otherwise("/home");
 

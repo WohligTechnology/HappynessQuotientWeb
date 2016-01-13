@@ -1,3 +1,12 @@
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+h2 { font-size: 36px; }
 .get-center {
   @include position(absolute, 50% auto auto 50%);
   @include transform(translate(-50%, -50%));
@@ -5,29 +14,38 @@
 .text-bold {
   font-weight: bold;
 }
+.btn, a {
+  &:active { box-shadow: none; }
+  &:focus { outline: none; }
+  &:active:focus { outline: none; }
+}
 .btn-primary { font-weight: bold; }
 .btn-green {
+  padding: 1px 0;
   font-weight: bold;
   @include button-variant($brand-success, $brand-primary, $brand-primary);
 }
 .btn-pink {
+  padding: 1px 0;
   font-weight: bold;
   @include button-variant($brand-danger, $brand-primary, $brand-primary);
 }
 .btn-pink2 {
-  padding: 2px 50px;
+  padding: 1px 50px;
   @include button-variant(white, $brand-danger, $brand-danger);
 }
 // Section 2
 .hq-features {
   .hq-image {
-    margin-left: 50px;
-    padding: 40px;
+    margin-right: 50px;
+    padding: 30px;
   }
   .hq-about, .about-one, .about-two {
     font-weight: 400;
-    p { margin-bottom: 20px; }
-    .about-title { font-size: 32px; }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
     .about-buttons {
       margin-top: 100px;
       button {
@@ -79,9 +97,8 @@
   }
   .hq-video-detail {
     @include transform(translate(-50%, -70%));
-    h4 {
+    h2 {
       margin-bottom: 30px;
-      font-size: 40px;
       font-weight: 400;
       letter-spacing: 2px;
       text-shadow: 0px 0px 100px black;
@@ -106,14 +123,12 @@
   font-weight: 400;
   .hq-store-blog { width: 100%; padding-top: 10%; }
   .hq-store, .hq-blog {
-    h2 {
-      font-size: 44px;
-      font-weight: 100;
-    }
-    span { font-size: 18px; }
+    h2 { font-weight: 100; }
+    span { font-size: 16px; }
     button {
       width: 200px;
       margin-top: 20px;
+      padding: 1px 0;
       font-size: 16px;
     }
   }
@@ -134,7 +149,6 @@
 .section-five {
   font-weight: 400;
   h2 {
-    font-size: 44px;
     letter-spacing: 1px;
     margin-top: 60px;
     margin-bottom: 30px;
@@ -171,8 +185,7 @@
       }
     }
     .hq-report-detail {
-      p { font-size: 32px; }
-      p + p { font-size: 16px; }
+      p { font-size: 16px; }
     }
   }
 }
@@ -183,11 +196,8 @@
     img { width: 75%; }
   }
   .talk-detail {
+    h2 { margin-top: 20px; }
     p {
-      margin-top: 20px;
-      font-size: 32px;
-    }
-    p + p {
       margin-bottom: 50px;
       font-size: 16px;
     }
@@ -261,7 +271,24 @@ footer {
       }
     }
   }
-  .subscribe { margin-bottom: 30px; }
+  .subscribe {
+    margin-bottom: 30px;
+    .form-group {
+      .form-control {
+        @include size(250px, 23px);
+        margin-right: -5px;
+        display: inline-block;
+        color: black;
+        font-size: 13px;
+        @include placeholder { font-family: $font-family-sans-serif; }
+        &:focus {
+          outline: none;
+          border: 1px solid #ccc;
+          box-shadow: none;
+        }
+      }
+    }
+  }
   .social-links {
     margin: 20px 0 10px 0;
     a {
@@ -293,7 +320,15 @@ footer {
   }
 }
 
-
+// Store
+.store-logo {
+  margin: 40px 0;
+  img {
+    @include size(20%, auto);
+    margin: 0 auto;
+    display: block;
+  }
+}
 
 
 // ANIMATIONS

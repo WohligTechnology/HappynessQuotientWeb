@@ -118,6 +118,10 @@ nav li:hover .dropdown-menu {
 }
 .bg-success {
   background-color: $brand-success;
+  &:focus { background-color: $brand-success !important; }
+}
+.bg-blue {
+  background-color: $brand-blue;
 }
 .bg-white {
   background-color: white;
