@@ -14,7 +14,7 @@ var navigationservice = angular.module('navigationservice', [])
     target: "_self",
     subnav: []
   }, {
-    name: "What's In Store",
+    name: "What's In Store?",
     classis: "active",
     anchor: "packages",
     target: "_self",
