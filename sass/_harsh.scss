@@ -6,6 +6,12 @@
     }
   }
 }
+.section-two, .section-four, .section-five {
+  padding-bottom: 95px;
+  position: relative;
+  z-index: 1;
+}
+a { cursor: pointer; padding: 0; }
 h2 { font-size: 36px; }
 span, p, a, table tr td, .btn { font-size: 14px; }
 .get-center {
@@ -16,7 +22,7 @@ span, p, a, table tr td, .btn { font-size: 14px; }
   font-weight: bold;
 }
 .btn, a {
-  padding: 1px 0;
+  padding: 4px 0;
   font-weight: bold;
   &:active { box-shadow: none; }
   &:focus { outline: none; }
@@ -34,10 +40,15 @@ span, p, a, table tr td, .btn { font-size: 14px; }
 .hq-features {
   .hq-image {
     margin-right: 50px;
-    padding: 30px;
+    padding: 30px 60px 30px 0;
   }
   .hq-about, .about-one, .about-two {
     font-weight: 400;
+    .unique-points {
+      position: relative;
+      padding-left: 20px;
+      i { position: absolute; left: 0%; top: 10%; }
+    }
     p { margin-bottom: 20px; }
     .about-buttons {
       margin-top: 100px;
@@ -149,7 +160,7 @@ span, p, a, table tr td, .btn { font-size: 14px; }
           padding: 10px 20px;
           letter-spacing: 1px;
           border-right: 2px solid darken($brand-success, 2%);
-          i { font-size: 28px; }
+          i { font-size: 18px; }
         }
         td:first-child { width: 40%; }
         td:last-child { border: none; }
@@ -186,14 +197,10 @@ span, p, a, table tr td, .btn { font-size: 14px; }
 .seven-two {
   font-weight: 400;
   .contact-section {
-    p {
-      font-size: 20px;
-      margin-bottom: 25px;
-    }
+    p { margin-bottom: 25px; }
     .contact-form {
       label {
         margin-top: 5px;
-        font-size: 16px;
         font-weight: 400;
       }
       input {
@@ -248,7 +255,7 @@ footer {
     margin-bottom: 30px;
     .form-group {
       .form-control {
-        @include size(250px, 23px);
+        @include size(250px, 21px);
         margin-right: -5px;
         display: inline-block;
         color: black;
@@ -303,10 +310,13 @@ footer {
   }
 }
 .store-table {
+  .store-table2 {
+    padding: 0 20px;
+    background-color: darken($brand-blue, 5%);
+  }
   margin: 50px 0;
   h2 { margin: 20px 0; }
-  table {
-    tbody { background-color: darken($brand-blue, 5%); }
+  table.table1, table.table2 {
     tr {
       border-top: 2px solid lighten($brand-blue, 2%);
       td, th {
@@ -314,10 +324,10 @@ footer {
         border: none;
         i {
           padding-top: 10px;
-          font-size: 32px;
+          font-size: 18px;
         }
       }
-      th, th.warning {
+      td.warning {
         background-color: transparent;
         font-weight: normal;
       }
@@ -326,9 +336,9 @@ footer {
         vertical-align: middle;
       }
     }
-    thead { font-size: 24px; }
     tr:first-child { border: none; }
   }
+  .table1 tr td { font-size: 24px; }
 }
 .store-plans, .store-more {
   position: relative;

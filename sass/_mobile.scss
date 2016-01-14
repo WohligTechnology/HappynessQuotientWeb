@@ -1,10 +1,5 @@
 @media (max-width: $screen-md-max) {
-  // Section 2
-  .hq-features {
-    .hq-about {
-      .about-title { font-size: 28px; }
-    }
-  }
+  h2 { font-size: 32px; }
   // Section 4
   .section-four {
     .hq-store-guy {
@@ -28,9 +23,10 @@
     }
   }
   // Store
-  .store-table table thead { font-size: 20px; }
+  .store-table table.table1 tr td { font-size: 20px; }
 }
 @media (max-width: $screen-sm-max) {
+  h2 { font-size: 28px; }
   // Section 2
   .hq-image {
     margin-bottom: 20px;
@@ -44,9 +40,6 @@
   .hq-features {
     .about-one,
     .about-two {
-      .about-title {
-        font-size: 28px;
-      }
       .about-one-image,
       .about-two-image {
         img {
@@ -65,49 +58,12 @@
   }
   // Section 4
   .section-four {
-    .hq-store h2,
-    .hq-blog h2 {
-      font-size: 40px;
-    }
-    .hq-store span {
-      font-size: 14px;
-    }
     .hq-store-guy {
       right: 5%;
       bottom: 25%;
       img {
         width: 50%;
         float: right;
-      }
-    }
-  }
-
-  // Section 5
-  .section-five {
-    h2 {
-      font-size: 32px;
-    }
-    .hq-table {
-      table {
-        tr {
-          td {
-            font-size: 14px;
-          }
-        }
-      }
-    }
-  }
-
-  // Section 6
-  .section-six {
-    .hq-reports {
-      .hq-report-detail {
-        p {
-          font-size: 24px;
-        }
-        p + p {
-          font-size: 14px;
-        }
       }
     }
   }
@@ -120,10 +76,6 @@
         width: 75%;
         margin: 0 auto;
       }
-    }
-    .talk-detail {
-      p { font-size: 28px; }
-      p + p { font-size: 14px; }
     }
     .seven-two {
       .contact-image {
@@ -157,29 +109,28 @@
   }
 
   // Store
-  .store-table table tr td, .store-table table tr th { padding: 20px; }
-  .store-table table tr td:first-child { width: 30%; }
+  .store-table table.table1 tr td, .store-table table.table2 tr td { padding: 20px; }
+  .store-table table.table1 tr td:first-child { width: 30%; }
   .store-plans .plan-image {
     @include position(absolute, 50% 0 0 auto);
     img { width: 50%; }
   }
 }
 @media (max-width: $screen-xs-max) {
-
+  h2 { font-size: 24px; }
+  span, p, a, table tr td, .btn { font-size: 12px; }
   // Section 2
   .section-two {
     @include position(relative, 0 0 0 0);
     @include transform(translate(0, 0));
     padding: 50px 20px;
     .hq-about {
-      .about-title { font-size: 24px; }
       .about-buttons {
         margin-top: 50px;
         button {
           width: 100%;
           display: block;
           margin-bottom: 20px;
-          font-size: 12px;
         }
         button + button {
           width: 100%;
@@ -200,7 +151,6 @@
   .section-three {
     .hq-video-detail {
       width: 80%;
-      h4 { font-size: 24px; }
     }
     .hq-awesome-guy {
       img { width: 30%; }
@@ -208,9 +158,6 @@
   }
   // Section 4
   .section-four {
-    .hq-store {
-      button { font-size: 14px; }
-    }
     .hq-store-guy {
       display: none;
     }
@@ -222,22 +169,11 @@
   // Section 5
   .section-five {
     width: 100%;
-    h2 {
-      margin-bottom: 20px;
-      font-size: 20px;
-    }
+    h2 { margin: 20px 0; font-size: 14px; }
     .hq-table {
       padding: 10px;
-      overflow-x: scroll;
-
-      table {
-        zoom: 0.6;
-        tr {
-          td {
-            font-size: 14px;
-          }
-        }
-      }
+      table tr td { padding: 5px 10px; }
+      table tr td i { font-size: 18px; }
     }
   }
 
@@ -247,7 +183,6 @@
       width: 80%;
       .hq-report-detail {
         margin-top: 50px;
-        p { font-size: 20px; }
       }
       .hq-report-image {
         img {
@@ -263,9 +198,6 @@
   .section-seven {
     width: 80%;
     .seven-one {
-      .talk-detail {
-        button { font-size: 14px; }
-      }
       .talk-image {
         margin-bottom: 50px;
         img { width: 50%; }
@@ -273,16 +205,18 @@
     }
     .seven-two {
       .contact-section {
-        p { font-size: 14px; }
+        p {
+          margin-bottom: 10px;
+          font-size: 14px;
+        }
         .contact-form {
-          label { font-size: 14px; }
+          .form-group { margin-bottom: 5px; }
+          label { font-size: 12px; }
+          .form-control { height: 25px; }
         }
         .contact-buttons {
           text-align: center;
-          button {
-            width: 40%;
-            font-size: 14px;
-          }
+          button { width: 40%; }
         }
       }
     }
@@ -305,24 +239,29 @@
         }
       }
     }
+    .subscribe .form-group .form-control { display: block; margin: 0 auto 10px; }
     .footer-copyright {
       width: 90%;
-      font-size: 12px;
       p { padding: 0 10px; }
     }
   }
   // Store
-  .store-table h2 { font-size: 24px; }
-  .store-plans h2, .store-more h2 { font-size: 24px; }
-  .store-main { span, p { font-size: 14px; } }
-  .store-table table tr td, .store-table table tr th {
+  .store-table table.table1 tr td { font-size: 12px; }
+  .store-table table.table1 tr td, .store-table table.table2 tr td {
     padding: 10px 15px;
-    font-size: 14px;
     & > i { font-size: 18px; }
   }
   .store-plans .plan-image { display: none; }
 }
-
+@media (max-width: 400px) {
+  span, p, a, table tr td, .btn { font-size: 10px; }
+  .section-five {
+    h2 { margin: 10px; }
+    .hq-table { padding: 5px; zoom: 0.6; }
+  }
+  .subscribe .form-group .form-control { width: 200px; }
+  .store-table .store-table2 { padding: 0 5px; }
+}
 
 // /////////////////////////
 // LANDSCAPE
@@ -347,9 +286,9 @@
       } }
     }
   }
-  .section-five {
-    h2 { font-size: 40px; }
-    .hq-table { table { tr { td { font-size: 16px; } } } }
+  .section-four {
+    .hq-store-blog { padding-top: 5%; }
+    .hq-store-guy { bottom: 10%; }
   }
 }
 
@@ -374,25 +313,19 @@
   .section-six {
     .hq-reports {
       .hq-report-image {
-        img {
-          width: 10%;
-          float: left;
-        }
+        img { float: left; }
       }
       .hq-report-detail { margin-top: 10px; }
     }
   }
   // Section 5
   .section-five {
-    h2 {
-      margin: 10px 0;
-      font-size: 20px;
-    }
+    h2 { margin: 10px 0; }
     .hq-table {
       padding: 2px;
       table { tr { td {
-      padding: 5px 12px;
-      font-size: 14px;
+      padding: 5px;
+      font-size: 11px;
     } } } }
   }
   // Section 7
@@ -401,7 +334,6 @@
       .talk-image {
         margin: 0;
         img {
-          width: 15%;
           float: left;
           margin-bottom: 10px;
         }
@@ -429,8 +361,7 @@
       .contact-image { display: none; }
     }
     .talk-detail {
-      p { font-size: 20px; }
-      p + p { margin-bottom: 20px; }
+      p { margin-bottom: 20px; }
     }
   }
 }

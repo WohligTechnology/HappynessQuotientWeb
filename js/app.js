@@ -12,24 +12,25 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
   $httpProvider.defaults.withCredentials = true;
 
   $stateProvider.state('home', {
-      url: "/home",
-      templateUrl: "views/template.html",
-      controller: 'HomeCtrl'
-    })
-    .state('homeid', {
-        url: "/home/:id",
-        templateUrl: "views/template.html",
-        controller: 'HomeCtrl'
-      })
-    .state('store', {
-      url: "/store",
+    url: "/",
+    templateUrl: "views/template.html",
+    controller: 'HomeCtrl'
+  })
+
+  .state('storedetail', {
+      url: "/storedetail",
       templateUrl: "views/template.html",
       controller: 'StoreCtrl'
+    })
+    .state('homeid', {
+      url: "/:id",
+      templateUrl: "views/template.html",
+      controller: 'HomeCtrl'
     });
 
   // $locationProvider.html5Mode(true);
 
-  $urlRouterProvider.otherwise("/home");
+  $urlRouterProvider.otherwise("/");
 
 });
 

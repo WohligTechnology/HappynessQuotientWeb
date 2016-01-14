@@ -171,6 +171,7 @@ nav li:hover .dropdown-menu {
       max-width: 230px;
       text-align: center;
       margin: 0 auto;
+      font-size: 18px;
       @include transition(all 300ms ease);
 
       &.active {

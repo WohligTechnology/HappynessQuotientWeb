@@ -9,27 +9,27 @@ var navigationservice = angular.module('navigationservice', [])
   }, {
     name: "Watch Video",
     classis: "active",
-    anchor: "watch",
+    anchor: "happinessquotient",
     subnav: []
   }, {
     name: "What's In Store",
     classis: "active",
-    anchor: "store",
+    anchor: "packages",
     subnav: []
   }, {
     name: "How is Happyness Quotient Different?",
     classis: "active",
-    anchor: "different",
+    anchor: "hqisunique",
     subnav: []
   }, {
     name: "What's next?",
     classis: "active",
-    anchor: "next",
+    anchor: "services",
     subnav: []
   }, {
     name: "Let's Talk",
     classis: "active",
-    anchor: "talk",
+    anchor: "contact",
     subnav: []
   }, {
     name: "Visit Never Grow Up®",
@@ -39,7 +39,7 @@ var navigationservice = angular.module('navigationservice', [])
   }, {
     name: "Visit Our Blog",
     classis: "active",
-    link: "/blog",
+    link: "http://www.willnevergrowup.com/blog/",
     subnav: []
   }, {
     name: "About Us",
@@ -49,7 +49,7 @@ var navigationservice = angular.module('navigationservice', [])
   }, {
     name: "Store",
     classis: "active",
-    link: "/store",
+    link: "#/storedetail",
     subnav: []
   }];
 

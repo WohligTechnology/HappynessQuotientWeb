@@ -3,25 +3,25 @@
     <div class="row">
       <div class="col-md-2 col-sm-12">
         <div class="about-us">
-          <span>About Us</span>
-          <span><a href="" class="success">Why measure Happyness?</a></span>
-          <span><a href="" class="success">What's unique about Happyness Quotient?</a></span>
+          <span><a href="http://www.willnevergrowup.com/aboutus" class="dark">About Us</a></span>
+          <span><a ng-click="changeURL('happyness'); changeMeasure(true); changeUnique(false);" class="success">Why measure Happyness?</a></span>
+          <span><a ng-click="changeURL('happyness'); changeMeasure(false); changeUnique(true);" class="success">What's unique about Happyness Quotient?</a></span>
         </div>
       </div>
       <div class="col-md-10 col-sm-12">
         <div class="footer-links-one">
           <div class="row">
             <div class="col-md-2">
-              <span><a ng-click="changeURL('watch')" class="dark">Watch Video</a></span>
+              <span><a ng-click="changeURL('happinessquotient')" class="dark">Watch Video</a></span>
             </div>
             <div class="col-md-3">
-              <span><a href="" class="dark">What's In Store</a></span>
+              <span><a ng-click="changeURL('packages')" class="dark">What's In Store</a></span>
             </div>
             <div class="col-md-4">
-              <span><a href="" class="dark">How is Happyness Quotient Different?</a></span>
+              <span><a ng-click="changeURL('happyness'); changeMeasure(false); changeUnique(false);" class="dark">How is Happyness Quotient Different?</a></span>
             </div>
             <div class="col-md-2">
-              <span><a href="" class="dark">What's next?</a></span>
+              <span><a ng-click="changeURL('services')" class="dark">What's next?</a></span>
             </div>
           </div>
         </div>
@@ -29,13 +29,13 @@
         <div class="footer-links-two">
           <div class="row">
             <div class="col-md-2">
-              <span><a href="" class="dark talk">Let's Talk</a></span>
+              <span><a ng-click="changeURL('contact')" class="dark talk">Let's Talk</a></span>
             </div>
             <div class="col-md-4">
-              <span><a href="" class="dark visit">Visit Never Grow Up<sup>&reg;</sup></a></span>
+              <span><a href="http://www.willnevergrowup.com/" class="dark visit">Visit Never Grow Up<sup>&reg;</sup></a></span>
             </div>
             <div class="col-md-3">
-              <span><a href="" class="dark visit">Visit Our Blog</a></span>
+              <span><a href="http://www.willnevergrowup.com/blog/" class="dark visit">Visit Our Blog</a></span>
             </div>
           </div>
         </div>
@@ -62,12 +62,7 @@
       </div>
 
       <div class="social-links text-center">
-        <!-- <a href="https://www.facebook.com/" class="bg-success light" target="_blank"><i class="fa fa-facebook"></i></a> -->
         <a href="https://twitter.com/" class="bg-success light" target="_blank"><i class="fa fa-twitter"></i></a>
-        <!-- <a href="https://instagram.com/" class="bg-success light" target="_blank"><i class="fa fa-instagram"></i></a> -->
-        <!-- <a href="https://plus.google.com/" class="bg-success light" target="_blank"><i class="fa fa-google-plus"></i></a> -->
-        <!-- <a href="https://www.pinterest.com/" class="bg-success light" target="_blank"><i class="fa fa-pinterest-p"></i></a> -->
-        <!-- <a href="https://www.youtube.com/" class="bg-success light" target="_blank"><i class="fa fa-youtube"></i></a> -->
         <a href="https://www.linkedin.com/" class="bg-success light" target="_blank"><i class="fa fa-linkedin"></i></a>
       </div>
     </div>
@@ -75,9 +70,9 @@
     <div class="footer-copyright dark text-center">
       <div class="row">
         <div class="copyright">
-          <p>&copy; The 'Never Grow Up Brown Box', Happyness Quotient nomenclature and brand logo are registered trademarks and property of Never Grow Up &reg; Workshops Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; The 'Never Grow Up Brown Box', Happyness Quotient nomenclature, images, logo, video and brand identity are registered trademarks and property of <a href="http://www.willnevergrowup.com/" class="dark" target="_blank">Never Grow Up</a> &reg; Workshops Pvt. Ltd. All rights reserved.</p>
           <hr>
-          <span>CopyrightHappynessQuotient{{template.year}}</span> |
+          <span>Made with <i class="fa fa-heart danger"></i> in India. Copyright Happyness Quotient powered by <a href="http://www.willnevergrowup.com/" class="dark" target="_blank">Never Grow Up</a>. {{template.year}}</span> |
           <span>Designed By <a href="http://www.ting.in/" class="dark" target="_blank">Ting</a></span>
         </div>
       </div>
