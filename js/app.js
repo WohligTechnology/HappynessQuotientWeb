@@ -28,7 +28,13 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
       controller: 'HomeCtrl'
     });
 
-  // $locationProvider.html5Mode(true);
+
+    if (isproduction == true) {
+      $locationProvider.html5Mode(true);
+    }
+    else {
+      $locationProvider.html5Mode(false);
+    }
 
   $urlRouterProvider.otherwise("/");
 
