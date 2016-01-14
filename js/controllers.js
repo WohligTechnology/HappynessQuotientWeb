@@ -7,23 +7,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location) {
     //Used to name the .html file
 
-    console.log($stateParams);
-    if (! _.isEmpty($stateParams.inside) ) {
-      switch ($stateParams.inside) {
-        case "1":
-          $scope.measure = false;
-          $scope.unique = false;
-          break;
-        case "2":
-          $scope.measure = false;
-          $scope.unique = true;
-          break;
-        case "3":
-          $scope.measure = true;
-          $scope.unique = false;
-          break;
-      }
-    }
+
+
     $scope.template = TemplateService.changecontent("home");
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
@@ -37,6 +22,29 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
 
     $scope.$on('$viewContentLoaded', function(event) {
+      if (! _.isEmpty($stateParams.inside) && ! _.isEmpty($stateParams.id) && $stateParams.id == "happyness") {
+        switch ($stateParams.inside) {
+          case "1":
+            $scope.measure = false;
+            $scope.unique = false;
+            break;
+          case "2":
+            $scope.measure = false;
+            $scope.unique = true;
+            break;
+          case "3":
+            $scope.measure = true;
+            $scope.unique = false;
+            break;
+        }
+      }
+      if (! _.isEmpty($stateParams.inside) && ! _.isEmpty($stateParams.id) && $stateParams.id == "contact") {
+        switch ($stateParams.inside) {
+          case "1":
+            $scope.talk = true;
+            break;
+        }
+      }
       setTimeout(function() {
         makeAnimation($stateParams.id);
       }, 100);
