@@ -49,13 +49,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       seven: "views/section/section7.html"
     };
   })
-  .controller('StoreCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+  .controller('PackageDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
     //Used to name the .html file
     $scope.changeURL = function(id) {
       $location.path(""+id);
     };
-    $scope.template = TemplateService.changecontent("store");
-    $scope.menutitle = NavigationService.makeactive("Store");
+    $scope.template = TemplateService.changecontent("packagedetail");
+    $scope.menutitle = NavigationService.makeactive("Packages");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
   })

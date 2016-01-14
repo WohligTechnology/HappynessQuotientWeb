@@ -58,7 +58,7 @@ var navigationservice = angular.module('navigationservice', [])
   }, {
     name: "Packages",
     classis: "active",
-    link: "#/storedetail",
+    link: "#/packagedetail",
     target: "_self",
     subnav: []
   }];

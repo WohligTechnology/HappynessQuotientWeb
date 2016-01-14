@@ -17,10 +17,10 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     controller: 'HomeCtrl'
   })
 
-  .state('storedetail', {
-      url: "/storedetail",
+  .state('packagedetail', {
+      url: "/packagedetail",
       templateUrl: "views/template.html",
-      controller: 'StoreCtrl'
+      controller: 'PackageDetailCtrl'
     })
     .state('homeid', {
       url: "/:id",
