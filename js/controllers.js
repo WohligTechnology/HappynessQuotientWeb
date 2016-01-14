@@ -33,7 +33,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       });
       makeAnimation(id);
       $location.replace();
-      headerController.toggleMenu();
+      headerController.closeMenu();
     };
 
 

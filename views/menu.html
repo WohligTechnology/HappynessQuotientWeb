@@ -1,6 +1,6 @@
 <ul class="list-unstyled">
   <li class="{{menu.classis}}" ng-repeat="menu in navigation">
-    <a ng-click="changeURL(menu.anchor)" ng-if="!menu.link" du-scrollspy du-smooth-scroll ng-click="closeMenu();">{{menu.name}}</a>
-    <a href="{{menu.link}}" ng-if="menu.link" du-scrollspy du-smooth-scroll ng-click="closeMenu();">{{menu.name}}</a>
+    <a ng-click="changeURL(menu.anchor)" ng-if="!menu.link" ng-click="closeMenu();">{{menu.name}}</a>
+    <a href="{{menu.link}}" ng-if="menu.link" ng-click="closeMenu();">{{menu.name}}</a>
   </li>
 </ul>
