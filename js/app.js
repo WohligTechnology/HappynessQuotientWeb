@@ -26,10 +26,16 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
       url: "/:id",
       templateUrl: "views/template.html",
       controller: 'HomeCtrl'
-    });
+    })
+    .state('happy', {
+      url: "/:id/:inside",
+      templateUrl: "views/template.html",
+      controller: 'HomeCtrl'
+    })
+    ;
 
 
-    if (isproduction == true) {
+    if (isproduction === true) {
       $locationProvider.html5Mode(true);
     }
     else {

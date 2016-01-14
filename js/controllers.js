@@ -6,6 +6,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location) {
     //Used to name the .html file
+
+    console.log($stateParams);
+    if (! _.isEmpty($stateParams.inside) ) {
+      switch ($stateParams.inside) {
+        case "1":
+          $scope.measure = false;
+          $scope.unique = false;
+          break;
+        case "2":
+          $scope.measure = false;
+          $scope.unique = true;
+          break;
+        case "3":
+          $scope.measure = true;
+          $scope.unique = false;
+          break;
+      }
+    }
     $scope.template = TemplateService.changecontent("home");
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
@@ -36,8 +54,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       headerController.closeMenu();
     };
 
-    $scope.changeMeasure = function(val) { $scope.measure = val; }
-    $scope.changeUnique = function(val) { $scope.unique = val; }
+    $scope.changeMeasure = function(val) {
+      $scope.measure = val;
+    };
+    $scope.changeUnique = function(val) {
+      $scope.unique = val;
+    };
 
     $scope.section = {
       one: "views/section/section1.html",
@@ -52,7 +74,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   .controller('PackageDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
     //Used to name the .html file
     $scope.changeURL = function(id) {
-      $location.path(""+id);
+      $location.path("" + id);
     };
     $scope.template = TemplateService.changecontent("packagedetail");
     $scope.menutitle = NavigationService.makeactive("Packages");
