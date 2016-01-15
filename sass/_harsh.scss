@@ -262,12 +262,10 @@ footer {
         @include size(250px, 21px);
         margin-right: -10px;
         display: inline-block;
-        color: black;
         font-size: 13px;
         box-shadow: none;
         -webkit-box-shodow: none;
         border-radius: 3px;
-        color: white;
         @include placeholder { font-family: $font-family-sans-serif; }
         &:focus {
           outline: none;

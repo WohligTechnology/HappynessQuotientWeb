@@ -77,7 +77,7 @@
       <div class="subscribe text-center" ng-controller="FooterCtrl">
         <form class="" name="formSubscribe" ng-hide="formDone">
           <div class="form-group" >
-            <input class="form-control" name="email" ng-model="subscribe.email" placeholder="Email" required type="email">
+            <input class="form-control dark" name="email" ng-model="subscribe.email" placeholder="Email" required type="email">
 
             <button class="btn btn-pink2" ng-click="sendSubEmail(subscribe.email)" type="button">Subscribe</button>
             <div ng-show="formSubscribe.email.$invalid && formSubscribe.email.$touched" role="alert" style="color:maroon">
