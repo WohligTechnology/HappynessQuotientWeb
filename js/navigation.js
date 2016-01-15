@@ -155,10 +155,6 @@ var navigationservice = angular.module('navigationservice', [])
         "from_email": "hq@willnevergrowup.in",
         "from_name": "HappynessQuoitent",
         "to": [{
-          "email": "chintan@wohlig.com",
-          "name": "Asif WillNeverGrowUp",
-          "type": "to"
-        },{
           "email": "asifupadhye@gmail.com",
           "name": "Asif WillNeverGrowUp",
           "type": "to"
