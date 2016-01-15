@@ -51,10 +51,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
 
     $scope.submitEnquiry = function(enquiry, enquiryForm) {
-      console.log(enquiryForm);
       if (enquiryForm.$valid) {
         $scope.thank = true;
-        //NavigationService.sendEnquiry(enquiry.name,enquiry.email,enquiry.organization,enquiry.tel);
+        NavigationService.sendEnquiry(enquiry.name,enquiry.email,enquiry.organization,enquiry.tel);
       }
     };
 
