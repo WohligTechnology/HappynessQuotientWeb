@@ -267,6 +267,7 @@ footer {
         box-shadow: none;
         -webkit-box-shodow: none;
         border-radius: 3px;
+        color: white;
         @include placeholder { font-family: $font-family-sans-serif; }
         &:focus {
           outline: none;

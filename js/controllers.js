@@ -13,7 +13,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    console.log($scope.navigation);
     function makeAnimation(id) {
       if (!_.isEmpty(id)) {
         var someElement = angular.element(document.getElementById(id));
