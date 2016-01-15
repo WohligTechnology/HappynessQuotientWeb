@@ -129,7 +129,37 @@ var navigationservice = angular.module('navigationservice', [])
         "from_email": "hq@willnevergrowup.in",
         "from_name": "HappynessQuoitent",
         "to": [{
-          "email": "chintan@wohlig.com",
+          "email": "asifupadhye@gmail.com",
+          "name": "Asif WillNeverGrowUp",
+          "type": "to"
+        },{
+          "email": "master@willnevergrowup.in",
+          "name": "Master WillNeverGrowUp",
+          "type": "to"
+        }, {
+          "email": "info@willnevergrowup.com",
+          "name": "Info WillNeverGrowUp",
+          "type": "to"
+        }],
+        "headers": {
+          "Reply-To": "master@willnevergrowup.in"
+        }
+      };
+
+      $http.post('https://mandrillapp.com/api/1.0/messages/send.json', emailMessage).success(function(data, status) {
+        console.log(data);
+      });
+
+    },
+    sendEnquiry: function(name,email,organization,tel) {
+      emailMessage.message = {
+        "html": "<p>Name: " + name + "</p><p>Email: " + email + "</p><p>Organization: " + organization + "</p><p>Telephone: " + tel + "</p>",
+        "text": "Name: " + name + "\nEmail: " + email + "\nOrganization: " + organization + "\nTelephone: " + tel,
+        "subject": "Enquiry for HappynessQuoitent.com",
+        "from_email": "hq@willnevergrowup.in",
+        "from_name": "HappynessQuoitent",
+        "to": [{
+          "email": "master@willnevergrowup.in",
           "name": "Master WillNeverGrowUp",
           "type": "to"
         }, {
