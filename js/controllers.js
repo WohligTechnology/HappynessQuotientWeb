@@ -21,45 +21,59 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       }
     }
 
-    $scope.$on('$viewContentLoaded', function(event) {
-      if (! _.isEmpty($stateParams.inside) && ! _.isEmpty($stateParams.id) && $stateParams.id == "happyness") {
-        switch ($stateParams.inside) {
-          case "1":
-            $scope.measure = false;
-            $scope.unique = false;
-            break;
-          case "2":
+    function forInside(id,inside) {
+      if (! _.isEmpty(inside) && ! _.isEmpty(id) && id == "happyness") {
+        switch (inside) {
+          case "unique":
             $scope.measure = false;
             $scope.unique = true;
             break;
-          case "3":
+          case "measure":
             $scope.measure = true;
             $scope.unique = false;
             break;
         }
       }
-      if (! _.isEmpty($stateParams.inside) && ! _.isEmpty($stateParams.id) && $stateParams.id == "contact") {
-        switch ($stateParams.inside) {
-          case "1":
+      if (! _.isEmpty(inside) && ! _.isEmpty(id) && id == "contact") {
+        switch (inside) {
+          case "feedback":
             $scope.talk = true;
             break;
         }
       }
+    }
+
+    $scope.$on('$viewContentLoaded', function(event) {
+      forInside($stateParams.id,$stateParams.inside);
       setTimeout(function() {
         makeAnimation($stateParams.id);
       }, 100);
     });
 
 
-    $scope.changeURL = function(id) {
-      $state.transitionTo('homeid', {
-        id: id
-      }, {
-        notify: false
-      });
+    $scope.changeURL = function(id,inside) {
+      if(inside)
+      {
+        $state.transitionTo('happy', {
+          id: id,
+          inside:inside
+        }, {
+          notify: false
+        });
+
+      }
+      else {
+        $state.transitionTo('homeid', {
+          id: id
+        }, {
+          notify: false
+        });
+      }
+
       makeAnimation(id);
       $location.replace();
       headerController.closeMenu();
+      forInside(id,inside);
     };
 
     $scope.changeMeasure = function(val) {
@@ -81,8 +95,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   })
   .controller('PackageDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
     //Used to name the .html file
-    $scope.changeURL = function(id) {
-      $location.path("" + id);
+    $scope.changeURL = function(id,inside) {
+      if(inside)
+      {
+        $location.path("" + id+"/"+inside);
+      }
+      else {
+        $location.path("" + id);
+      }
+
     };
     $scope.template = TemplateService.changecontent("packagedetail");
     $scope.menutitle = NavigationService.makeactive("Packages");
