@@ -1,6 +1,50 @@
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
+
+  var emailMessage = {
+    "key": atob("YmpzaEloMW5oTmxvbHhPQmpyUFRfQQ=="),
+    "message": {
+      "html":"",
+      "text": "",
+      "subject": "Subscribe for HappynessQuoitent.com",
+      "from_email": "hq@willnevergrowup.in",
+      "from_name": "HappynessQuoitent",
+      "to": [{
+        "email": "master@willnevergrowup.com",
+        "name": "Master WillNeverGrowUp",
+        "type": "to"
+      }, {
+        "email": "info@willnevergrowup.com",
+        "name": "Info WillNeverGrowUp",
+        "type": "to"
+      }],
+      "headers": {
+        "Reply-To": "master@willnevergrowup.in"
+      },
+      "important": false,
+      "track_opens": null,
+      "track_clicks": null,
+      "auto_text": null,
+      "auto_html": null,
+      "inline_css": null,
+      "url_strip_qs": null,
+      "preserve_recipients": null,
+      "view_content_link": null,
+      "tracking_domain": null,
+      "signing_domain": null,
+      "return_path_domain": null,
+      "merge": true,
+      "merge_language": "mailchimp",
+      "global_merge_vars": [{
+        "name": "merge1",
+        "content": "merge1 content"
+      }]
+    },
+    "async": false,
+    "ip_pool": "Main Pool"
+  };
+
   var navigation = [{
     name: "Happyness Quotient",
     classis: "active",
@@ -78,47 +122,24 @@ var navigationservice = angular.module('navigationservice', [])
       return menuname;
     },
     sendSubEmail: function(email) {
-      var emailMessage = {
-        "key": atob("YmpzaEloMW5oTmxvbHhPQmpyUFRfQQ=="),
-        "message": {
-          "html": "<p>Subscribe: " + email + "</p>",
-          "text": "Subscribe: " + email,
-          "subject": "Subscribe for HappynessQuoitent.com",
-          "from_email": "hq@willnevergrowup.in",
-          "from_name": "HappynessQuoitent",
-          "to": [{
-            "email": "master@willnevergrowup.com",
-            "name": "Master WillNeverGrowUp",
-            "type": "to"
-          }, {
-            "email": "info@willnevergrowup.com",
-            "name": "Info WillNeverGrowUp",
-            "type": "to"
-          }],
-          "headers": {
-            "Reply-To": "master@willnevergrowup.in"
-          },
-          "important": false,
-          "track_opens": null,
-          "track_clicks": null,
-          "auto_text": null,
-          "auto_html": null,
-          "inline_css": null,
-          "url_strip_qs": null,
-          "preserve_recipients": null,
-          "view_content_link": null,
-          "tracking_domain": null,
-          "signing_domain": null,
-          "return_path_domain": null,
-          "merge": true,
-          "merge_language": "mailchimp",
-          "global_merge_vars": [{
-            "name": "merge1",
-            "content": "merge1 content"
-          }]
-        },
-        "async": false,
-        "ip_pool": "Main Pool"
+      emailMessage.message = {
+        "html": "<p>Subscribe: " + email + "</p>",
+        "text": "Subscribe: " + email,
+        "subject": "Subscribe for HappynessQuoitent.com",
+        "from_email": "hq@willnevergrowup.in",
+        "from_name": "HappynessQuoitent",
+        "to": [{
+          "email": "chintan@wohlig.com",
+          "name": "Master WillNeverGrowUp",
+          "type": "to"
+        }, {
+          "email": "info@willnevergrowup.com",
+          "name": "Info WillNeverGrowUp",
+          "type": "to"
+        }],
+        "headers": {
+          "Reply-To": "master@willnevergrowup.in"
+        }
       };
 
       $http.post('https://mandrillapp.com/api/1.0/messages/send.json', emailMessage).success(function(data, status) {

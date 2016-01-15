@@ -110,7 +110,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.sendSubEmail = function(email) {
       if ($scope.formSubscribe.$valid) {
 
-          //NavigationService.sendSubEmail(email);
+          NavigationService.sendSubEmail(email);
           $scope.formDone = true;
       }
     };
