@@ -5,7 +5,7 @@ var navigationservice = angular.module('navigationservice', [])
   var emailMessage = {
     "key": atob("YmpzaEloMW5oTmxvbHhPQmpyUFRfQQ=="),
     "message": {
-      "html":"",
+      "html": "",
       "text": "",
       "subject": "Subscribe for HappynessQuoitent.com",
       "from_email": "hq@willnevergrowup.in",
@@ -125,10 +125,14 @@ var navigationservice = angular.module('navigationservice', [])
       emailMessage.message = {
         "html": "<p>Subscribe: " + email + "</p>",
         "text": "Subscribe: " + email,
-        "subject": "Subscribe for HappynessQuoitent.com",
+        "subject": "New Subscriber on HappynessQuotient.com​",
         "from_email": "hq@willnevergrowup.in",
-        "from_name": "HappynessQuoitent",
+        "from_name": "HappynessQuotient",
         "to": [{
+          "email": "asifupadhye@gmail.com",
+          "name": "Asif WillNeverGrowUp",
+          "type": "to"
+        }, {
           "email": "master@willnevergrowup.in",
           "name": "Master WillNeverGrowUp",
           "type": "to"
@@ -147,18 +151,18 @@ var navigationservice = angular.module('navigationservice', [])
       });
 
     },
-    sendEnquiry: function(name,email,organization,tel) {
+    sendEnquiry: function(name, email, organization, tel) {
       emailMessage.message = {
         "html": "<p>Name: " + name + "</p><p>Email: " + email + "</p><p>Organization: " + organization + "</p><p>Telephone: " + tel + "</p>",
         "text": "Name: " + name + "\nEmail: " + email + "\nOrganization: " + organization + "\nTelephone: " + tel,
-        "subject": "Enquiry for HappynessQuoitent.com",
+        "subject": "Enquiry for HappynessQuotient.com",
         "from_email": "hq@willnevergrowup.in",
-        "from_name": "HappynessQuoitent",
+        "from_name": "HappynessQuotient",
         "to": [{
           "email": "asifupadhye@gmail.com",
           "name": "Asif WillNeverGrowUp",
           "type": "to"
-        },{
+        }, {
           "email": "master@willnevergrowup.in",
           "name": "Master WillNeverGrowUp",
           "type": "to"
