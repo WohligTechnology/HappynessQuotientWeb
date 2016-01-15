@@ -129,10 +129,6 @@ var navigationservice = angular.module('navigationservice', [])
         "from_email": "hq@willnevergrowup.in",
         "from_name": "HappynessQuoitent",
         "to": [{
-          "email": "asifupadhye@gmail.com",
-          "name": "Asif WillNeverGrowUp",
-          "type": "to"
-        },{
           "email": "master@willnevergrowup.in",
           "name": "Master WillNeverGrowUp",
           "type": "to"
@@ -159,6 +155,10 @@ var navigationservice = angular.module('navigationservice', [])
         "from_email": "hq@willnevergrowup.in",
         "from_name": "HappynessQuoitent",
         "to": [{
+          "email": "asifupadhye@gmail.com",
+          "name": "Asif WillNeverGrowUp",
+          "type": "to"
+        },{
           "email": "master@willnevergrowup.in",
           "name": "Master WillNeverGrowUp",
           "type": "to"
