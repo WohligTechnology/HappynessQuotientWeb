@@ -1,6 +1,7 @@
 <ul class="list-unstyled">
+
   <li class="{{menu.classis}}" ng-repeat="menu in navigation">
-    <a ng-click="changeURL(menu.anchor)" ng-if="!menu.anchor" ng-click="closeMenu();" target="{{menu.target}}">{{menu.name}}</a>
+    <a ng-click="changeURL(menu.anchor)" ng-if="menu.anchor" ng-click="closeMenu();" target="{{menu.target}}">{{menu.name}}</a>
     <a href="{{menu.link}}" ng-if="menu.link" ng-click="closeMenu();" target="{{menu.target}}">{{menu.name}}</a>
     <a ui-sref="{{menu.sref}}" ng-if="menu.sref" ng-click="closeMenu();" target="{{menu.target}}">{{menu.name}}</a>
   </li>
