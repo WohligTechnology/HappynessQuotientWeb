@@ -50,6 +50,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       }, 100);
     });
 
+    $scope.submitEnquiry = function(enquiry, enquiryForm) {
+      console.log(enquiryForm);
+      if (enquiryForm.$valid) {
+        $scope.thank = true;
+        //NavigationService.sendEnquiry(enquiry.name,enquiry.email,enquiry.organization,enquiry.tel);
+      }
+    };
+
 
     $scope.changeURL = function(id, inside) {
       if (inside) {
@@ -110,8 +118,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.sendSubEmail = function(email) {
       if ($scope.formSubscribe.$valid) {
 
-          NavigationService.sendSubEmail(email);
-          $scope.formDone = true;
+        NavigationService.sendSubEmail(email);
+        $scope.formDone = true;
       }
     };
   })
