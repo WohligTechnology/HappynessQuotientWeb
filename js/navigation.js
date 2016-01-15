@@ -1,6 +1,6 @@
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [{
     name: "Happyness Quotient",
     classis: "active",
@@ -77,6 +77,51 @@ var navigationservice = angular.module('navigationservice', [])
       }
       return menuname;
     },
+    sendEmail: function(html,text,subject) {
+      var emailMessage = {
+        "key": atob("YmpzaEloMW5oTmxvbHhPQmpyUFRfQQ=="),
+        "message": {
+          "html": "<p>Example HTML content</p>",
+          "text": "Example text content",
+          "subject": "example subject",
+          "from_email": "master@willnevergrowup.in",
+          "from_name": "Enquiry for Website",
+          "to": [{
+            "email": "master@willnevergrowup.in",
+            "name": "Chintan Shah",
+            "type": "to"
+          }],
+          "headers": {
+            "Reply-To": "master@willnevergrowup.in"
+          },
+          "important": false,
+          "track_opens": null,
+          "track_clicks": null,
+          "auto_text": null,
+          "auto_html": null,
+          "inline_css": null,
+          "url_strip_qs": null,
+          "preserve_recipients": null,
+          "view_content_link": null,
+          "tracking_domain": null,
+          "signing_domain": null,
+          "return_path_domain": null,
+          "merge": true,
+          "merge_language": "mailchimp",
+          "global_merge_vars": [{
+            "name": "merge1",
+            "content": "merge1 content"
+          }]
+        },
+        "async": false,
+        "ip_pool": "Main Pool"
+      };
 
+      $http.post('https://mandrillapp.com/api/1.0/messages/send.json', emailMessage).success(function(data, status) {
+        console.log(data);
+        console.log(status);
+      });
+
+    }
   };
 });

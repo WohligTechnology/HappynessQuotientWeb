@@ -9,7 +9,7 @@ var firstapp = angular.module('firstapp', [
 firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
   // for http request with session
-  $httpProvider.defaults.withCredentials = true;
+  // $httpProvider.defaults.withCredentials = true;
 
   $stateProvider.state('home', {
     url: "/",

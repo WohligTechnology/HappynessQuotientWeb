@@ -21,8 +21,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       }
     }
 
-    function forInside(id,inside) {
-      if (! _.isEmpty(inside) && ! _.isEmpty(id) && id == "happyness") {
+    function forInside(id, inside) {
+      if (!_.isEmpty(inside) && !_.isEmpty(id) && id == "happyness") {
         switch (inside) {
           case "unique":
             $scope.measure = false;
@@ -34,7 +34,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             break;
         }
       }
-      if (! _.isEmpty(inside) && ! _.isEmpty(id) && id == "contact") {
+      if (!_.isEmpty(inside) && !_.isEmpty(id) && id == "contact") {
         switch (inside) {
           case "feedback":
             $scope.talk = true;
@@ -44,25 +44,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
 
     $scope.$on('$viewContentLoaded', function(event) {
-      forInside($stateParams.id,$stateParams.inside);
+      forInside($stateParams.id, $stateParams.inside);
       setTimeout(function() {
         makeAnimation($stateParams.id);
       }, 100);
     });
 
+    $scope.sendEmail = function() {
+      NavigationService.sendEmail();
+    };
 
-    $scope.changeURL = function(id,inside) {
-      if(inside)
-      {
+    $scope.changeURL = function(id, inside) {
+      if (inside) {
         $state.transitionTo('happy', {
           id: id,
-          inside:inside
+          inside: inside
         }, {
           notify: false
         });
 
-      }
-      else {
+      } else {
         $state.transitionTo('homeid', {
           id: id
         }, {
@@ -73,7 +74,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       makeAnimation(id);
       $location.replace();
       headerController.closeMenu();
-      forInside(id,inside);
+      forInside(id, inside);
     };
 
     $scope.changeMeasure = function(val) {
@@ -95,12 +96,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   })
   .controller('PackageDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
     //Used to name the .html file
-    $scope.changeURL = function(id,inside) {
-      if(inside)
-      {
-        $location.path("" + id+"/"+inside);
-      }
-      else {
+    $scope.changeURL = function(id, inside) {
+      if (inside) {
+        $location.path("" + id + "/" + inside);
+      } else {
         $location.path("" + id);
       }
 
