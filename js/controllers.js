@@ -50,9 +50,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       }, 100);
     });
 
-    $scope.sendEmail = function() {
-      NavigationService.sendEmail();
-    };
 
     $scope.changeURL = function(id, inside) {
       if (inside) {
@@ -108,6 +105,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Packages");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+  })
+  .controller('FooterCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+    $scope.sendSubEmail = function(email) {
+      if ($scope.formSubscribe.$valid) {
+
+          //NavigationService.sendSubEmail(email);
+          $scope.formDone = true;
+      }
+    };
   })
 
 .controller('headerctrl', function($scope, TemplateService) {

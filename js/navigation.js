@@ -77,18 +77,22 @@ var navigationservice = angular.module('navigationservice', [])
       }
       return menuname;
     },
-    sendEmail: function(html,text,subject) {
+    sendSubEmail: function(email) {
       var emailMessage = {
         "key": atob("YmpzaEloMW5oTmxvbHhPQmpyUFRfQQ=="),
         "message": {
-          "html": "<p>Example HTML content</p>",
-          "text": "Example text content",
-          "subject": "example subject",
-          "from_email": "master@willnevergrowup.in",
-          "from_name": "Enquiry for Website",
+          "html": "<p>Subscribe: " + email + "</p>",
+          "text": "Subscribe: " + email,
+          "subject": "Subscribe for HappynessQuoitent.com",
+          "from_email": "hq@willnevergrowup.in",
+          "from_name": "HappynessQuoitent",
           "to": [{
-            "email": "master@willnevergrowup.in",
-            "name": "Chintan Shah",
+            "email": "master@willnevergrowup.com",
+            "name": "Master WillNeverGrowUp",
+            "type": "to"
+          }, {
+            "email": "info@willnevergrowup.com",
+            "name": "Info WillNeverGrowUp",
             "type": "to"
           }],
           "headers": {
@@ -119,7 +123,6 @@ var navigationservice = angular.module('navigationservice', [])
 
       $http.post('https://mandrillapp.com/api/1.0/messages/send.json', emailMessage).success(function(data, status) {
         console.log(data);
-        console.log(status);
       });
 
     }
