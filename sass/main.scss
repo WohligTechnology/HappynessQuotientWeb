@@ -137,7 +137,7 @@ nav li:hover .dropdown-menu {
   max-width: 1170px;
 
   img {
-    width: 75%;
+    width: 50%;
   }
 }
 .centralize {
@@ -146,6 +146,13 @@ nav li:hover .dropdown-menu {
   left: 0;
   width: 100%;
   @include transform(translateY(-50%));
+}
+.arrow-down {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 5px);
+  z-index: 1;
+  i { font-size: 30px; }
 }
 .menu {
     position: fixed;

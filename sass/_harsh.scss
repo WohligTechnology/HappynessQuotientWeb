@@ -152,13 +152,13 @@ span, p, a, table tr td, .btn { font-size: 14px; }
     margin-bottom: 30px;
   }
   .hq-table {
-    padding: 15px 20px;
+    padding: 0 15px;
     background-color: lighten($brand-success, 5%);
     table {
       tr {
         border-bottom: 2px solid darken($brand-success, 2%);
         td {
-          padding: 10px 20px;
+          padding: 10px;
           letter-spacing: 1px;
           border-right: 2px solid darken($brand-success, 2%);
           i { font-size: 18px; }
@@ -312,6 +312,10 @@ footer {
 }
 
 // Store
+.store-main {
+  position: relative;
+  .inner-store { margin-bottom: 95px; z-index: 1; }
+}
 .store-logo {
   margin: 40px 0;
   img {
@@ -355,9 +359,9 @@ footer {
   position: relative;
   margin-bottom: 60px;
   h2 { margin-bottom: 30px; }
-  span, p {
+  .inner-plans {
     margin-bottom: 8px;
-    display: block;
+    span { margin-left: 10px; }
   }
   .plan-image {
     @include position(absolute, 25% 0 0 auto);

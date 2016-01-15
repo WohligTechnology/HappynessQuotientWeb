@@ -27,6 +27,7 @@
 }
 @media (max-width: $screen-sm-max) {
   h2 { font-size: 28px; }
+  .hq-features .hq-image { margin: 0; padding: 0; }
   // Section 2
   .hq-image {
     margin-bottom: 20px;
@@ -67,7 +68,8 @@
       }
     }
   }
-
+  // Section 5
+  .section-five .hq-table { padding: 0 10px; }
   // Section 7
   .section-seven {
     .talk-image {
@@ -118,8 +120,8 @@
 }
 @media (max-width: $screen-xs-max) {
   h2 { font-size: 24px; }
-  span, p, a, table tr td, .btn { font-size: 12px; }
   // Section 2
+  .hq-features .inner-about { margin: 0; }
   .section-two {
     @include position(relative, 0 0 0 0);
     @include transform(translate(0, 0));
@@ -151,6 +153,7 @@
   .section-three {
     .hq-video-detail {
       width: 80%;
+      span { font-size: 80px; }
     }
     .hq-awesome-guy {
       img { width: 30%; }
@@ -168,11 +171,10 @@
 
   // Section 5
   .section-five {
-    width: 100%;
-    h2 { margin: 20px 0; font-size: 14px; }
+    h2 { margin: 50px 0; font-size: 14px; }
     .hq-table {
-      padding: 10px;
-      table tr td { padding: 5px 10px; }
+      padding: 0 2px;
+      table tr td { padding: 5px; }
       table tr td i { font-size: 18px; }
     }
   }
@@ -186,7 +188,7 @@
       }
       .hq-report-image {
         img {
-          width: 30%;
+          width: 40%;
           margin: 0 auto;
           float: none;
         }
@@ -200,7 +202,7 @@
     .seven-one {
       .talk-image {
         margin-bottom: 50px;
-        img { width: 50%; }
+        img { width: 60%; }
       }
     }
     .seven-two {
@@ -211,7 +213,6 @@
         }
         .contact-form {
           .form-group { margin-bottom: 5px; }
-          label { font-size: 12px; }
           .form-control { height: 25px; }
         }
         .contact-buttons {
@@ -322,9 +323,9 @@
   .section-five {
     h2 { margin: 10px 0; }
     .hq-table {
-      padding: 2px;
+      padding: 0 10px;
       table { tr { td {
-      padding: 5px;
+      padding: 10px;
       font-size: 11px;
     } } } }
   }
@@ -345,10 +346,7 @@
         .contact-form {
           .form-group {
             margin: 0;
-            label {
-              margin: 0;
-              font-size: 12px;
-            }
+            label { margin: 0; }
             input {
               height: 25px;
               margin: 2px 0;
@@ -361,7 +359,7 @@
       .contact-image { display: none; }
     }
     .talk-detail {
-      p { margin-bottom: 20px; }
+      p { margin-bottom: 10px; }
     }
   }
 }
