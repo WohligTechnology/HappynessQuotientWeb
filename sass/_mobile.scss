@@ -120,6 +120,17 @@
   }
 }
 @media (max-width: $screen-xs-max) {
+  .menu-circle {
+    top: 10px;
+    right: 10px;
+    height: 36px;
+    width: 36px;
+    padding-top: 5px;
+
+    .bar {
+      width: 18px;
+    }
+  }
   h2 { font-size: 24px; }
   // Section 2
   .hq-features .inner-about { margin: 0; }
@@ -258,7 +269,7 @@
 @media (max-width: 400px) {
   span, p, a, table tr td, .btn { font-size: 10px; }
   .section-five {
-    h2 { margin: 10px; }
+    h2 { margin: 10px; margin-top: 30px;}
     .hq-table { padding: 5px; zoom: 0.6; }
   }
   .subscribe .form-group .form-control { width: 200px; }
