@@ -1,22 +1,101 @@
 <div class="section-six">
-  <div class="hq-reports get-center">
-    <div class="container">
+  <div class="container">
+  <div class="hq-reports">
       <div class="row">
-        <div class="col-md-5 col-sm-5 col-xs-12">
-          <div class="hq-report-image">
-            <img src="img/section6/1.png" alt="" class="img-responsive" />
-          </div>
-        </div>
-        <div class="col-md-7 col-sm-7 col-xs-12">
+        <div class="col-md-5">
+          <img src="img/section6/1.png" alt="" class="img-responsive"/>
           <div class="hq-report-detail">
             <h2 class="text-left warning">I have the reports. What next?</h2>
-            <p class="text-justify light">As a team, we specialize in coming up with customized solutions that work for your company. We are happy to manage turnkey execution, to ensure that recommended initiatives lead to a positive impact on your company’s Happyness Quotient. <a href="http://www.willnevergrowup.com/employeeengagement.html" class="warning" target="_blank">Click here</a> to view a complete set of service offerings.</p>
+            <p class="text-justify light">As a team, we specialize in coming up with customized solutions that work for your company. We are happy to manage turnkey execution, to ensure that recommended initiatives lead to a positive impact on your company’s Happyness Quotient.
+              <a href="http://www.willnevergrowup.com/employeeengagement.html" class="warning" target="_blank">Click here</a>
+              to view a complete set of service offerings.</p>
           </div>
+        </div>
+
+        <div class="col-md-5 col-md-offset-2">
+
+          <div class="seven-one seven-animate" ng-hide="talk">
+            <div class="talk-image">
+              <img alt="" class="img-responsive" src="img/section7/1.png"/>
+            </div>
+            <div class="talk-detail">
+              <h2 class="text-left warning">Let's Talk</h2>
+              <p class="text-justify light">A happier workforce stays longer and is more productive. Interested to find out if measuring employee happyness is really easy and fun to do? Ask for a demo!</p>
+              <button class="btn btn-pink text-center" ng-click="talk=true" type="button">Click here</button>
+            </div>
+          </div>
+
+
+          <div class="seven-two seven-animate" ng-show="talk">
+            <div class="contact-section">
+              <p class="text-justify light">Call us on <a href="tel:+919892338317" class="light">+91 98923 38317</a> / <a href="tel:+919029038317" class="light">+91 90290 38317</a> or share details and we’ll get back.</p>
+              <div class="contact-form" ng-hide="thank" >
+
+                <form  class="form-horizontal" name="enquiryForm">
+                  <div class="form-group">
+                    <label class="col-sm-2 light" for="name">Name:</label>
+                    <div class="col-sm-10">
+                      <input class="form-control light" id="name" name="name" ng-model="enquiry.name" required type="text">
+                      <div class="enquiryValidation" ng-show="enquiryForm.name.$invalid && enquiryForm.name.$touched" role="alert">
+                        Please enter your name.
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 light" for="name">Email:</label>
+                    <div class="col-sm-10">
+                      <input class="form-control light" required id="name" name="email" ng-model="enquiry.email" type="email">
+                      <div class="enquiryValidation" ng-show="enquiryForm.email.$invalid && enquiryForm.email.$touched" role="alert">
+                        Please enter a valid email address.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 light" for="name">Organization:</label>
+                    <div class="col-sm-9">
+                      <input class="form-control light" required id="name" name="organization" ng-model="enquiry.organization" type="text">
+                      <div class="enquiryValidation" ng-show="enquiryForm.organization.$invalid && enquiryForm.organization.$touched" role="alert">
+                        Please enter organization name.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-3 light" for="name">Phone no:</label>
+                    <div class="col-sm-9">
+                      <input class="form-control light" required id="name" name="tel" ng-model="enquiry.tel" type="text">
+                      <div class="enquiryValidation" ng-show="enquiryForm.tel.$invalid && enquiryForm.tel.$touched" role="alert">
+                        Please enter telephone number.
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="contact-buttons" ng-hide="thank">
+                <button class="btn btn-pink text-center" ng-click="submitEnquiry(enquiry,enquiryForm)" type="button">Send</button>
+                <button class="btn btn-pink text-center" ng-click="talk=false" type="button">Back</button>
+              </div>
+            </div>
+            <div class="thank-section light" ng-show="thank">
+              <p>Hello There!</p>
+              <p>Thank you for reaching out to Happyness Quotient and sharing details. We'll get in touch with you within 48 hours.</p>
+              <p>In the interim, do check out
+                <a class="light" href="http://www.willnevergrowup.com/blog/" target="_blank">our blog</a>
+                for the latest information, perspectives and the science of decoding Happyness At Work.</p>
+              <p>Happy Reading!</p>
+              <p>Team Never Grow Up</p>
+              <button class="btn btn-green text-center" type="button" ng-click="talk=false;">Done</button>
+            </div>
+
+          </div>
+
+
+
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="pattern-bottom bg-success">
-  <img src="img/red-left.png" alt="" class="full-image" />
+<div class="pattern-bottom bg-white">
+  <img src="img/red-left.png" alt="" class="full-image"/>
 </div>

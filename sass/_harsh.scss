@@ -182,6 +182,10 @@ span, p, a, table tr td, .btn { font-size: 14px; }
 .section-six {
   .hq-reports {
     font-weight: 400;
+    padding: 70px;
+    img {
+      width: 55%;
+    }
     .hq-report-image {
       img {
         width: 50%;
@@ -199,7 +203,7 @@ span, p, a, table tr td, .btn { font-size: 14px; }
   }
   .talk-detail {
     h2 { margin-top: 20px; }
-    p { margin-bottom: 50px; }
+    p { margin-bottom: 10px; }
     button { width: 200px; }
   }
 }
