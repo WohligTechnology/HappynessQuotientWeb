@@ -76,6 +76,9 @@
   .seven-one {
     .talk-image { width: 50%; }
   }
+  .seven-two {
+    @include transform(translate(0%, 0%));
+  }
   .section-seven {
     .talk-image {
       margin-top: 50px;
@@ -319,6 +322,9 @@
   .section-four {
     .hq-store-blog { padding-top: 5%; }
     .hq-store-guy { bottom: 10%; width: 40%; }
+  }
+  .seven-two {
+    @include transform(translate(0%, 25%));
   }
 }
 

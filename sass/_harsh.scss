@@ -201,6 +201,7 @@ span, p, a, table tr td, .btn { font-size: 14px; }
 }
 .seven-two {
   font-weight: 400;
+  @include transform(translate(0%, 25%));
   .contact-section {
     p { margin-bottom: 25px; }
     .contact-form {
