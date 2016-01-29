@@ -59,9 +59,7 @@ nav li:hover .dropdown-menu {
   @include button-variant($brand-primary, $brand-blue, $brand-blue);
 }
 .btn.btn-strong {
-    font-size: 16px;
-    padding: 1px 10px;
-    font-weight: 700;
+    padding: 2px 10px;
     margin: 30px 0;
 }
 /* Start writing sass here */

@@ -17,7 +17,6 @@
       .contact-section {
         .contact-buttons {
           text-align: center;
-          button { width: 40%; }
         }
       }
     }
@@ -71,7 +70,12 @@
   }
   // Section 5
   .section-five .hq-table { padding: 0 10px; }
+  // Section 6
+  .section-six-img { width: 50%; }
   // Section 7
+  .seven-one {
+    .talk-image { width: 50%; }
+  }
   .section-seven {
     .talk-image {
       margin-top: 50px;
@@ -142,12 +146,10 @@
       .about-buttons {
         margin-top: 50px;
         button {
-          width: 100%;
           display: block;
           margin-bottom: 20px;
         }
         button + button {
-          width: 100%;
           display: block;
           margin: 0;
         }
@@ -194,9 +196,8 @@
   // Section 6
   .section-six {
     .hq-reports {
-      width: 80%;
       .hq-report-detail {
-        margin-top: 50px;
+        margin-top: 20px;
       }
       .hq-report-image {
         img {
@@ -207,6 +208,12 @@
       }
     }
   }
+
+  .section-six-img, .seven-one .talk-image { width: 40%; }
+  .seven-one, .seven-two { margin-bottom: 40px; }
+  .form-group { margin: 0; }
+  .form-group:last-child { margin-bottom: 10px; }
+  .form-control { height: 28px; }
 
   // Section 7
   .section-seven {
@@ -229,7 +236,6 @@
         }
         .contact-buttons {
           text-align: center;
-          button { width: 40%; }
         }
       }
     }
@@ -267,13 +273,24 @@
   .store-plans .plan-image { display: none; }
 }
 @media (max-width: 400px) {
-  span, p, a, table tr td, .btn { font-size: 10px; }
+  .btn { padding: 5px 8px; }
+  h2 { font-size: 20px; }
+  span, p, a, .btn { font-size: 10px; }
+  .section-two { padding: 50px 0; }
+  .hq-features .about-two button { margin-top: 50px; }
+  .hq-features .about-two .about-two-image img { margin-top: -100px; }
   .section-five {
     h2 { margin: 10px; margin-top: 30px;}
     .hq-table { padding: 5px; zoom: 0.6; }
   }
+  .section-six .hq-reports { padding: 20px; }
+  .section-six .hq-reports .hq-report-detail { margin-top: 20px; }
   .subscribe .form-group .form-control { width: 200px; }
   .store-table .store-table2 { padding: 0 5px; }
+  footer .subscribe .form-group .form-control {
+    @include size(200px, 28px);
+    font-size: 12px;
+  }
 }
 
 // /////////////////////////
@@ -301,11 +318,20 @@
   }
   .section-four {
     .hq-store-blog { padding-top: 5%; }
-    .hq-store-guy { bottom: 10%; }
+    .hq-store-guy { bottom: 10%; width: 40%; }
   }
 }
 
 @media (max-width: $screen-sm-max) and (orientation: landscape) {
+  .btn.btn-strong { margin: 00px 0; }
+  .section.one {
+    .centralize {
+      img { width: 30%; }
+    }
+    .happy-people { margin: 00px auto 0; }
+    .happy-people img { width: 20%; }
+    .arrow-down { bottom: 15px; }
+  }
   .section-two {
     margin: 0;
   }
@@ -314,7 +340,6 @@
     .hq-store, .hq-blog {
       h2 { font-size: 28px; }
       button {
-        width: 20%;
         margin-top: 10px;
       }
     }
@@ -366,7 +391,6 @@
           }
           .form-group:last-child { margin-bottom: 10px; }
         }
-        .contact-buttons { button { padding: 4px 0; } }
       }
       .contact-image { display: none; }
     }

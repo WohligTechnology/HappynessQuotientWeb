@@ -22,20 +22,17 @@ span, p, a, table tr td, .btn { font-size: 14px; }
   font-weight: bold;
 }
 .btn, a {
-  padding: 4px 0;
   font-weight: bold;
   &:active { box-shadow: none; }
   &:focus { outline: none; }
   &:active:focus { outline: none; }
 }
+.btn { padding: 8px 10px; }
 .btn-primary { font-weight: bold; }
 .btn-white { @include button-variant($body-bg, $brand-primary, $brand-primary); }
 .btn-green { @include button-variant($brand-success, $brand-primary, $brand-primary); }
 .btn-pink { @include button-variant($brand-danger, $brand-primary, $brand-primary); }
-.btn-pink2 {
-  padding: 0 20px;
-  @include button-variant(white, $brand-danger, $brand-danger);
-}
+.btn-pink2 { @include button-variant(white, $brand-danger, $brand-danger); }
 // Section 2
 .hq-features {
   .inner-about { margin-bottom: -95px; }
@@ -53,8 +50,6 @@ span, p, a, table tr td, .btn { font-size: 14px; }
     p { margin-bottom: 20px; }
     .about-buttons {
       margin-top: 100px;
-      button { width: 40%; }
-      button + button { width: 59%; }
     }
     .about-image {
       margin-top: 50px;
@@ -66,7 +61,6 @@ span, p, a, table tr td, .btn { font-size: 14px; }
     p + p { letter-spacing: 1px; }
     p > i { margin-right: 10px; }
     button {
-      width: 30%;
       margin-top: 50px;
     }
     .about-one-image, .about-two-image {
@@ -127,7 +121,6 @@ span, p, a, table tr td, .btn { font-size: 14px; }
   .hq-store, .hq-blog {
     h2 { font-weight: 100; }
     a {
-      width: 200px;
       margin-top: 20px;
     }
   }
@@ -204,7 +197,6 @@ span, p, a, table tr td, .btn { font-size: 14px; }
   .talk-detail {
     h2 { margin-top: 20px; }
     p { margin-bottom: 10px; }
-    button { width: 200px; }
   }
 }
 .seven-two {
@@ -223,7 +215,6 @@ span, p, a, table tr td, .btn { font-size: 14px; }
       }
     }
     .contact-buttons {
-      button { width: 49.6%; }
     }
   }
   .contact-image {
@@ -271,10 +262,9 @@ footer {
     margin-bottom: 30px;
     .form-group {
       .form-control {
-        @include size(250px, 21px);
+        @include size(250px, 36px);
         margin-right: -10px;
         display: inline-block;
-        font-size: 13px;
         box-shadow: none;
         -webkit-box-shodow: none;
         border-radius: 3px;

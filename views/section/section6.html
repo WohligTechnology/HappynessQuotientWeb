@@ -3,7 +3,9 @@
   <div class="hq-reports">
       <div class="row">
         <div class="col-md-5">
-          <img src="img/section6/1.png" alt="" class="img-responsive"/>
+          <div class="section-six-img">
+            <img src="img/section6/1.png" alt="" class="img-responsive"/>
+          </div>
           <div class="hq-report-detail">
             <h2 class="text-left warning">I have the reports. What next?</h2>
             <p class="text-justify light">As a team, we specialize in coming up with customized solutions that work for your company. We are happy to manage turnkey execution, to ensure that recommended initiatives lead to a positive impact on your company’s Happyness Quotient.
@@ -21,7 +23,7 @@
             <div class="talk-detail">
               <h2 class="text-left warning">Let's Talk</h2>
               <p class="text-justify light">A happier workforce stays longer and is more productive. Interested to find out if measuring employee happyness is really easy and fun to do? Ask for a demo!</p>
-              <button class="btn btn-pink text-center" ng-click="talk=true" type="button">Click here</button>
+              <button class="btn btn-pink" ng-click="talk=true" type="button">Click here</button>
             </div>
           </div>
 
@@ -72,8 +74,8 @@
                 </form>
               </div>
               <div class="contact-buttons" ng-hide="thank">
-                <button class="btn btn-pink text-center" ng-click="submitEnquiry(enquiry,enquiryForm)" type="button">Send</button>
-                <button class="btn btn-pink text-center" ng-click="talk=false" type="button">Back</button>
+                <button class="btn btn-pink" ng-click="submitEnquiry(enquiry,enquiryForm)" type="button">Send</button>
+                <button class="btn btn-pink" ng-click="talk=false" type="button">Back</button>
               </div>
             </div>
             <div class="thank-section light" ng-show="thank">
