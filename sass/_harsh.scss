@@ -187,6 +187,12 @@ span, p, a, table tr td, .btn { font-size: 14px; }
       }
     }
   }
+  .seven-two {
+    .contact-buttons {
+      button { width: 49%; }
+      button + button { float: right; }
+    }
+  }
 }
 // Section 7
 .seven-one {
