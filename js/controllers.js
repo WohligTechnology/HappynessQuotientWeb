@@ -4,7 +4,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .value('duScrollDuration', 1400)
 
-.controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location) {
+.controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location,$uibModal) {
     //Used to name the .html file
 
 
@@ -96,6 +96,27 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       six: "views/section/section6.html",
       seven: "views/section/section7.html"
     };
+
+    //uimodal
+
+    $scope.animationsEnabled = true;
+
+$scope.open = function (size) {
+
+  var modalInstance = $uibModal.open({
+    animation: $scope.animationsEnabled,
+    templateUrl: 'views/section/video-modal.html',
+    controller: 'VideoCtrl',
+    size: size,
+    resolve: {
+      items: function () {
+        return $scope.items;
+      }
+    }
+  });
+
+};
+
   })
   .controller('PackageDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
     //Used to name the .html file
@@ -120,6 +141,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.formDone = true;
       }
     };
+  })
+  .controller('VideoCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+
   })
 
 .controller('headerctrl', function($scope, TemplateService) {
