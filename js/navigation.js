@@ -70,7 +70,7 @@ var navigationservice = angular.module('navigationservice', [])
     target: "_self",
     subnav: []
   }, {
-    name: "What's next?",
+    name: "What's Next?",
     classis: "active",
     anchor: "services",
     target: "_self",

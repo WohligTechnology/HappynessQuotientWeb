@@ -92,7 +92,7 @@ span, p, a, table tr td, .btn { font-size: 14px; }
     background-position: center center;
   }
   .hq-video-detail {
-    @include transform(translate(-50%, -70%));
+    @include transform(translate(-50%, -50%));
     h2 {
       margin-bottom: 30px;
       font-weight: 400;
@@ -256,7 +256,7 @@ footer {
   }
   .footer-links-two { font-weight: bold; }
   .mobile-store {
-    margin: 50px 0;
+    margin: 20px 0 30px;
     .play-store, .app-store {
       display: inline-block;
       img {
