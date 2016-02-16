@@ -4,15 +4,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 .value('duScrollDuration', 1400)
 
-.controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location,$uibModal) {
+.controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location, $uibModal) {
     //Used to name the .html file
-
-
-
     $scope.template = TemplateService.changecontent("home");
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+
     function makeAnimation(id) {
       if (!_.isEmpty(id)) {
         var someElement = angular.element(document.getElementById(id));
@@ -52,7 +50,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.submitEnquiry = function(enquiry, enquiryForm) {
       if (enquiryForm.$valid) {
         $scope.thank = true;
-        NavigationService.sendEnquiry(enquiry.name,enquiry.email,enquiry.organization,enquiry.tel);
+        NavigationService.sendEnquiry(enquiry.name, enquiry.email, enquiry.organization, enquiry.tel);
       }
     };
 
@@ -101,21 +99,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.animationsEnabled = true;
 
-$scope.open = function (size) {
+    $scope.open = function() {
 
-  var modalInstance = $uibModal.open({
-    animation: $scope.animationsEnabled,
-    templateUrl: 'views/section/video-modal.html',
-    controller: 'VideoCtrl',
-    size: size,
-    resolve: {
-      items: function () {
-        return $scope.items;
-      }
-    }
-  });
+      var modalInstance = $uibModal.open({
+        animation: $scope.animationsEnabled,
+        templateUrl: 'views/section/video-modal.html',
+        controller: 'VideoCtrl',
+        size: 'lg',
+        resolve: {
+          items: function() {
+            return $scope.items;
+          }
+        }
+      });
 
-};
+    };
 
   })
   .controller('PackageDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
@@ -142,9 +140,10 @@ $scope.open = function (size) {
       }
     };
   })
-  .controller('VideoCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
 
-  })
+.controller('VideoCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+  $('#vid').get(0).play();
+})
 
 .controller('headerctrl', function($scope, TemplateService) {
   headerController = $scope;

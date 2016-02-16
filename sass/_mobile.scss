@@ -25,6 +25,9 @@
   .store-table table.table1 tr td { font-size: 20px; }
 }
 @media (max-width: $screen-sm-max) {
+  .arrow-down {
+    bottom: 25px;
+  }
   h2 { font-size: 28px; }
   .happy-people img { width: 50%; }
   .hq-features .hq-image { margin: 0; padding: 0; }
@@ -97,11 +100,25 @@
     }
   }
 
+  .store-logo {
+    img {
+      width: 50%;
+    }
+  }
+
+
   // Footer
   footer {
+    margin-top: 30px;
     text-align: center;
+    .null-mb {
+      margin-bottom: 0;
+    }
+    .lh200 {
+      line-height: 180%;
+    }
     .about-us {
-      margin-bottom: 30px;
+      // margin-bottom: 30px;
       span {
         margin: 0;
       }
@@ -268,10 +285,16 @@
     }
   }
   // Store
+  .store-table {
+    overflow: scroll;
+    .store-table2 {
+      min-width: 360px;
+    }
+  }
   .store-table table.table1 tr td { font-size: 12px; }
   .store-table table.table1 tr td, .store-table table.table2 tr td {
     padding: 10px 15px;
-    & > i { font-size: 18px; }
+    & > i { font-size: 12px; }
   }
   .store-plans .plan-image { display: none; }
 }
@@ -281,9 +304,9 @@
   span, p, a, .btn { font-size: 10px; }
   .section-two { padding: 50px 0; }
   .hq-features .about-two button { margin-top: 50px; }
-  .hq-features .about-two .about-two-image img { margin-top: -100px; }
+  .hq-features .about-two .about-two-image img { margin-top: -70px; }
   .section-five {
-    h2 { margin: 10px; margin-top: 30px;}
+    h2 { margin: 10px; margin-top: 50px;}
     .hq-table { padding: 5px; zoom: 0.6; }
   }
   .section-six .hq-reports { padding: 20px; }
@@ -334,8 +357,8 @@
     .centralize {
       img { width: 30%; }
     }
-    .happy-people { margin: 00px auto 0; }
-    .happy-people img { width: 20%; }
+    .happy-people { margin: 0px auto 0; }
+    // .happy-people img { width: 20%; }
     .arrow-down { bottom: 15px; }
   }
   .section-two {
