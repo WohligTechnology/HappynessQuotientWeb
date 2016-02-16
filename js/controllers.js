@@ -105,7 +105,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         animation: $scope.animationsEnabled,
         templateUrl: 'views/section/video-modal.html',
         controller: 'VideoCtrl',
-        size: 'lg',
         resolve: {
           items: function() {
             return $scope.items;
@@ -142,7 +141,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   })
 
 .controller('VideoCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-  $('#vid').get(0).play();
 })
 
 .controller('headerctrl', function($scope, TemplateService) {
