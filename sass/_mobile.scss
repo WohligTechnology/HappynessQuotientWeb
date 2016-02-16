@@ -287,8 +287,11 @@
   // Store
   .store-table {
     overflow: scroll;
+    .store-table1 {
+      min-width: 395px;
+    }
     .store-table2 {
-      min-width: 360px;
+      min-width: 395px;
     }
   }
   .store-table table.table1 tr td { font-size: 12px; }
