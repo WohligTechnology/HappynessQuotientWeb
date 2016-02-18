@@ -17,6 +17,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $document.scrollToElement(someElement, 0, 1400);
       }
     }
+    function makeAnimationInside(id, inside) {
+      if (!_.isEmpty(id) && !_.isEmpty(inside)) {
+        var someElement = angular.element(document.getElementById(inside));
+        $document.scrollToElement(someElement, 0, 1400);
+      }
+    }
 
     function forInside(id, inside) {
       if (!_.isEmpty(inside) && !_.isEmpty(id) && id == "happyness") {
@@ -44,6 +50,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       forInside($stateParams.id, $stateParams.inside);
       setTimeout(function() {
         makeAnimation($stateParams.id);
+        makeAnimationInside($stateParams.id, $stateParams.inside);
       }, 100);
     });
 
@@ -63,16 +70,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, {
           notify: false
         });
-
+        makeAnimationInside(id, inside);
       } else {
         $state.transitionTo('homeid', {
           id: id
         }, {
           notify: false
         });
+        makeAnimation(id);
       }
 
-      makeAnimation(id);
+
       $location.replace();
       headerController.closeMenu();
       forInside(id, inside);
