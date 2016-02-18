@@ -268,5 +268,10 @@ nav li:hover .dropdown-menu {
   margin-top:3px;
   margin-bottom:0px;
 }
+.modal {
+  video {
+    margin-bottom: -5px;
+  }
+}
 @import "harsh";
 @import "mobile";
