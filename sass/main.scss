@@ -273,5 +273,22 @@ nav li:hover .dropdown-menu {
     margin-bottom: -5px;
   }
 }
+.close-modal {
+    position: absolute;
+    color: white;
+    right: -7px;
+    top: -10px;
+    font-size: 15px;
+    background-color: black;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 9;
+}
+.modal-backdrop.in {
+  opacity: 0.85;
+}
 @import "harsh";
 @import "mobile";
