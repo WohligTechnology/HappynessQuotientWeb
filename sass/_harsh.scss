@@ -117,7 +117,7 @@ span, p, a, table tr td, .btn { font-size: 14px; }
 .section-four {
   width: 100%;
   font-weight: 400;
-  .hq-store-blog { width: 100%; padding-top: 10%; }
+  .hq-store-blog { width: 100%; padding: 60px 0 10px; }
   .hq-store, .hq-blog {
     h2 { font-weight: 100; }
     a {
@@ -130,7 +130,9 @@ span, p, a, table tr td, .btn { font-size: 14px; }
   .hq-store-guy {
     position: absolute;
     right: 10%;
-    bottom: 10%;
+    bottom: 50%;
+    @include transform(translateY(50%));
+
     img {
       width: 75%;
       float: right;

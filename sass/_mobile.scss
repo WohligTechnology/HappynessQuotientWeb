@@ -4,7 +4,7 @@
   .section-four {
     .hq-store-guy {
       right: 5%;
-      bottom: -5%;
+      // bottom: -5%;
       img {
         width: 60%;
         float: right;
@@ -64,7 +64,7 @@
   .section-four {
     .hq-store-guy {
       right: 5%;
-      bottom: 25%;
+      // bottom: 25%;
       img {
         width: 50%;
         float: right;
@@ -199,7 +199,7 @@
       display: none;
     }
     .hq-store-blog {
-      padding-top: 30%;
+      padding: 20% 0;
     }
   }
 
@@ -348,8 +348,11 @@
     }
   }
   .section-four {
-    .hq-store-blog { padding-top: 5%; }
-    .hq-store-guy { bottom: 10%; width: 40%; }
+    .hq-store-blog { padding: 5% 0; }
+    .hq-store-guy {
+      //  bottom: 10%;
+       width: 40%;
+     }
   }
   .seven-two {
     @include transform(translate(0%, 25%));
