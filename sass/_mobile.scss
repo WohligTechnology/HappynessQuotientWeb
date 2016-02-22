@@ -286,7 +286,7 @@
   }
   // Store
   .store-table {
-    overflow: scroll;
+    overflow-x: scroll;
     .store-table1 {
       min-width: 395px;
     }
@@ -297,11 +297,13 @@
   .store-table table.table1 tr td { font-size: 12px; }
   .store-table table.table1 tr td, .store-table table.table2 tr td {
     padding: 10px 15px;
+    font-size: 12px;
     & > i { font-size: 12px; }
   }
   .store-plans .plan-image { display: none; }
 }
 @media (max-width: 400px) {
+  .logo { width: 150px !important; }
   .btn { padding: 5px 8px; }
   h2 { font-size: 20px; }
   span, p, a, .btn { font-size: 10px; }
