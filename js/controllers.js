@@ -17,6 +17,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $document.scrollToElement(someElement, 0, 1400);
       }
     }
+
     function makeAnimationInside(id, inside) {
       if (!_.isEmpty(id) && !_.isEmpty(inside)) {
         var someElement = angular.element(document.getElementById(inside));
@@ -119,6 +120,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
           }
         }
       });
+      modalInstance.opened.then(function() {
+        $timeout(function() {
+          $('#vid')[0].play();
+        }, 1000);
+      });
 
     };
 
@@ -149,6 +155,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
   })
 
 .controller('VideoCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+
 })
 
 .controller('headerctrl', function($scope, TemplateService) {
