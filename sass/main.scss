@@ -290,5 +290,8 @@ nav li:hover .dropdown-menu {
 .modal-backdrop.in {
   opacity: 0.85;
 }
+.pointer {
+  cursor: pointer;
+}
 @import "harsh";
 @import "mobile";
