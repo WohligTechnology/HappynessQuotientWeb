@@ -90,13 +90,13 @@ var navigationservice = angular.module('navigationservice', [])
   }, {
     name: "Visit Our Blog",
     classis: "active",
-    link: "http://www.willnevergrowup.com/blog/",
+    link: "http://blog.willnevergrowup.com/",
     target: "_blank",
     subnav: []
   }, {
     name: "About Us",
     classis: "active",
-    link: "http://www.willnevergrowup.com/about.html",
+    link: "http://www.willnevergrowup.com/about",
     target: "_blank",
     subnav: []
   }, {
