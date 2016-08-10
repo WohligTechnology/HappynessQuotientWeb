@@ -32,6 +32,7 @@ span, p, a, table tr td, .btn { font-size: 14px; }
 .btn-white { @include button-variant($body-bg, $brand-primary, $brand-primary); }
 .btn-green { @include button-variant($brand-success, $brand-primary, $brand-primary); }
 .btn-pink { @include button-variant($brand-danger, $brand-primary, $brand-primary); }
+.btn-yblue { @include button-variant($brand-blue, $brand-primary, $brand-primary); }
 .btn-pink2 { @include button-variant(white, $brand-danger, $brand-danger); }
 // Section 2
 .hq-features {
