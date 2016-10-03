@@ -1,126 +1,141 @@
 <footer>
-  <div class="container">
-    <div class="row lh200">
-      <div class="col-md-2 col-sm-12">
-        <div class="about-us null-mb">
-          <span>
+    <div class="container">
+        <div class="row lh200">
+            <div class="col-md-2 col-sm-12">
+                <div class="about-us null-mb">
+                    <span>
             <a class="dark" href="http://www.willnevergrowup.com/about" target="_blank">About Us</a>
           </span>
-          <span>
+                    <span>
             <a class="success" ng-click="changeURL('happyness', 'measure')">Why measure Happyness?</a>
           </span>
-          <span>
+                    <span>
             <a class="success" ng-click="changeURL('happyness', 'unique')">What's unique about Happyness Quotient?</a>
           </span>
-        </div>
-      </div>
-      <div class="col-md-10 col-sm-12">
-        <div class="footer-links-one text-center null-mb">
-          <div class="row">
-            <div class="col-md-2">
-              <span>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-12">
+                <div class="footer-links-one text-center null-mb">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <span>
                 <a class="dark" ng-click="changeURL('happinessquotient')">Watch Video</a>
               </span>
-            </div>
-            <div class="col-md-3">
-              <span>
+                        </div>
+                        <div class="col-md-3">
+                            <span>
                 <a class="dark" ui-sref="packagedetail">What's In Store?</a>
               </span>
-            </div>
-            <div class="col-md-4">
-              <span>
+                        </div>
+                        <div class="col-md-4">
+                            <span>
                 <a class="dark" ng-click="changeURL('hqisunique')">How is Happyness Quotient Different?</a>
               </span>
-            </div>
-            <div class="col-md-2">
-              <span>
+                        </div>
+                        <div class="col-md-2">
+                            <span>
                 <a class="dark" ng-click="changeURL('services')">What's Next?</a>
               </span>
-            </div>
-          </div>
-        </div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="footer-links-two text-center null-mb">
-          <div class="row">
-            <div class="col-md-2">
-              <span>
+                <div class="footer-links-two text-center null-mb">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <span>
                 <a class="dark talk" ng-click="changeURL('contact')">Let's Talk</a>
               </span>
-            </div>
-            <div class="col-md-3">
-              <span>
+                        </div>
+                        <div class="col-md-3">
+                            <span>
                 <a class="dark visit" href="http://www.willnevergrowup.com/" target="_blank">Visit Never Grow Up
                   <sup>&reg;</sup>
                 </a>
               </span>
-            </div>
-            <div class="col-md-4">
-              <span>
+                        </div>
+                        <div class="col-md-4">
+                            <span>
                 <a class="dark visit" href="http://blog.willnevergrowup.com/" target="_blank">Visit Our Blog</a>
               </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="subscribe text-center" ng-controller="FooterCtrl">
-        <form class="" name="formSubscribe" ng-hide="formDone">
-          <div class="form-group" >
-            <input class="form-control dark" name="email" ng-model="subscribe.email" placeholder="Email" required type="email">
+        <div class="row">
+            <div class="subscribe text-center" ng-controller="FooterCtrl">
+                <form class="" name="formSubscribe" ng-hide="formDone">
+                    <div class="form-group">
+                        <input class="form-control dark" name="email" ng-model="subscribe.email" placeholder="Email" required type="email">
 
-            <button class="btn btn-pink" ng-click="sendSubEmail(subscribe.email)" type="button">Subscribe</button>
-            <div ng-show="formSubscribe.email.$invalid && formSubscribe.email.$touched" role="alert" style="color:maroon">
-              <p>
-                Please enter a valid email address.
-              </p>
+                        <button class="btn btn-pink" ng-click="sendSubEmail(subscribe.email)" type="button">Subscribe</button>
+                        <div ng-show="formSubscribe.email.$invalid && formSubscribe.email.$touched" role="alert" style="color:maroon">
+                            <p>
+                                Please enter a valid email address.
+                            </p>
+                        </div>
+                    </div>
+                </form>
+                <div class="" ng-show="formDone">
+                    Thank you for subscribing.
+                </div>
             </div>
-          </div>
-        </form>
-        <div class="" ng-show="formDone">
-          Thank you for subscribing.
+
+
+
+            <div class="social-links">
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/HappynessAtWork" target="_blank">
+                          <img src="img/social.png" class="img-responsive doneLoading">
+                          <i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/1650364?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1650364%2Cidx%3A3-1-4%2CtarId%3A1455883935589%2Ctas%3Anever%20grow%20up%20" target="_blank">
+                          <img src="img/social.png" class="img-responsive doneLoading">
+                          <i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="social-links1 text-center">
+              <a class="bg-success light" href="https://twitter.com/HappynessAtWork" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a class="bg-success light" href="https://www.linkedin.com/company/1650364?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1650364%2Cidx%3A3-1-4%2CtarId%3A1455883935589%2Ctas%3Anever%20grow%20up%20" target="_blank">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </div>
+
+            <div class="mobile-store text-center">
+                <div class="app-store">
+                    <a href="https://itunes.apple.com/in/app/happyness-quotient/id1155404059?mt=8" target="_blank"><img alt="" class="img-responsive" src="img/app-store.png" /></a>
+                </div>
+                <div class="play-store">
+                    <a href="https://play.google.com/store/apps/details?id=com.happynessquotient.app&hl=en" target="_blank"><img alt="" class="img-responsive" src="img/play-store.png" /></a>
+                </div>
+            </div>
+
         </div>
-      </div>
 
-      <div class="social-links text-center">
-        <a class="bg-success light" href="https://twitter.com/HappynessAtWork" target="_blank">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a class="bg-success light" href="https://www.linkedin.com/company/1650364?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A1650364%2Cidx%3A3-1-4%2CtarId%3A1455883935589%2Ctas%3Anever%20grow%20up%20" target="_blank">
-          <i class="fa fa-linkedin"></i>
-        </a>
-      </div>
-
-      <div class="mobile-store text-center">
-        <div class="app-store">
-          <a href=""><img alt="" class="img-responsive" src="img/app-store.png"/></a>
-        </div>
-        <div class="play-store">
-          <a href=""><img alt="" class="img-responsive" src="img/play-store.png"/></a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="footer-copyright dark text-center">
-      <div class="row">
-        <div class="copyright" id="innovative">
-          <p>&copy; The 'Never Grow Up Brown Box', Happyness Quotient nomenclature, images, logo, video and brand identity are registered trademarks and property of
-            <a class="dark" href="http://www.willnevergrowup.com/" target="_blank">Never Grow Up</a>
-            &reg; Workshops Pvt. Ltd. All rights reserved.<br> CBR 3584 | Patent Pending Technology Product | Application 201621006871</p>
-          <hr>
-          <span>Made with
+        <div class="footer-copyright dark text-center">
+            <div class="row">
+                <div class="copyright" id="innovative">
+                    <p>&copy; The 'Never Grow Up Brown Box', Happyness Quotient nomenclature, images, logo, video and brand identity are registered trademarks and property of
+                        <a class="dark" href="http://www.willnevergrowup.com/" target="_blank">Never Grow Up</a> &reg; Workshops Pvt. Ltd. All rights reserved.<br> CBR 3584 | Patent Pending Technology Product | Application 201621006871</p>
+                    <hr>
+                    <span>Made with
             <i class="fa fa-heart danger"></i>
             in India. Copyright Happyness Quotient powered by
-            <a class="dark" href="http://www.willnevergrowup.com/" target="_blank">Never Grow Up</a>.
-            {{template.year}}</span>
-          |
-          <span>Designed By
+            <a class="dark" href="http://www.willnevergrowup.com/" target="_blank">Never Grow Up ®</a>.
+            {{template.year}}</span> |
+                    <span>Designed By
             <a class="dark" href="http://www.ting.in/" target="_blank">Ting</a>
           </span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </footer>
