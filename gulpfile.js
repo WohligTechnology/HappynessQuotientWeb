@@ -308,7 +308,13 @@ gulp.task('renamePHP', function() {
     .pipe(gulp.dest("./"));
 });
 
-
+gulp.task('cloudDeploy', function () {
+  var gulpCopy = require('gulp-copy');
+  return gulp.src(["./production/**"])
+    .pipe(gulpCopy("./happynessquotient/", {
+      prefix: 1
+    }));
+});
 
 gulp.task('watch', ["sass:development", "watch:all"]);
 gulp.task('default', ["sass:development", "watch:all"]);
