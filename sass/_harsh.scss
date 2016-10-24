@@ -220,6 +220,20 @@ a {
     -webkit-animation: jump 3.5s ease 0s infinite normal;
     animation: jump 3.5s ease 0s infinite normal;
 }
+
+.about-image img,
+.center-img,
+.hoverimg,
+.hq-awesome-guy img,
+.section-six-img img,
+.talk-image img {
+    -webkit-animation: jump 3.5s ease 0s infinite normal;
+    animation: jump 3.5s ease 0s infinite normal;
+}
+
+.nonanim {
+    animation: none !important;
+}
 @keyframes jump {
     0% {
         -webkit-transform: translateY(0);
