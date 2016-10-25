@@ -1,10 +1,10 @@
 var headerController = {};
 
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'duScroll'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'duScroll', 'base64'])
 
 .value('duScrollDuration', 1400)
 
-.controller('HomeCtrl', function($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location, $uibModal) {
+.controller('HomeCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location, $uibModal, $base64) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("home");
     $scope.menutitle = NavigationService.makeactive("Home");
@@ -47,15 +47,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       }
     }
 
-    $scope.$on('$viewContentLoaded', function(event) {
+    $scope.$on('$viewContentLoaded', function (event) {
       forInside($stateParams.id, $stateParams.inside);
-      setTimeout(function() {
+      setTimeout(function () {
         makeAnimation($stateParams.id);
         makeAnimationInside($stateParams.id, $stateParams.inside);
       }, 100);
     });
 
-    $scope.submitEnquiry = function(enquiry, enquiryForm) {
+    $scope.submitEnquiry = function (enquiry, enquiryForm) {
       if (enquiryForm.$valid) {
         $scope.thank = true;
         NavigationService.sendEnquiry(enquiry.name, enquiry.email, enquiry.organization, enquiry.tel);
@@ -63,7 +63,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
 
-    $scope.changeURL = function(id, inside) {
+    $scope.changeURL = function (id, inside) {
       if (inside) {
         $state.transitionTo('happy', {
           id: id,
@@ -87,10 +87,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       forInside(id, inside);
     };
 
-    $scope.changeMeasure = function(val) {
+    $scope.changeMeasure = function (val) {
       $scope.measure = val;
     };
-    $scope.changeUnique = function(val) {
+    $scope.changeUnique = function (val) {
       $scope.unique = val;
     };
 
@@ -108,20 +108,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.animationsEnabled = true;
 
-    $scope.open = function() {
+    $scope.open = function () {
 
       var modalInstance = $uibModal.open({
         animation: $scope.animationsEnabled,
         templateUrl: 'views/section/video-modal.html',
         controller: 'VideoCtrl',
         resolve: {
-          items: function() {
+          items: function () {
             return $scope.items;
           }
         }
       });
-      modalInstance.opened.then(function() {
-        $timeout(function() {
+      modalInstance.opened.then(function () {
+        $timeout(function () {
           $('#vid')[0].play();
         }, 1000);
       });
@@ -129,9 +129,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
   })
-  .controller('PackageDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+  .controller('PackageDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
     //Used to name the .html file
-    $scope.changeURL = function(id, inside) {
+    $scope.changeURL = function (id, inside) {
       if (inside) {
         $location.path("" + id + "/" + inside);
       } else {
@@ -144,8 +144,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
   })
-  .controller('FooterCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
-    $scope.sendSubEmail = function(email) {
+  .controller('FooterCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
+    $scope.sendSubEmail = function (email) {
       if ($scope.formSubscribe.$valid) {
 
         NavigationService.sendSubEmail(email);
@@ -154,26 +154,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
   })
 
-.controller('VideoCtrl', function($scope, TemplateService, NavigationService, $timeout, $location) {
+.controller('VideoCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
 
 })
 
-.controller('headerctrl', function($scope, TemplateService) {
+.controller('headerctrl', function ($scope, TemplateService) {
   headerController = $scope;
   $scope.template = TemplateService;
 
   $scope.showMenu = false;
-  $scope.toggleMenu = function() {
+  $scope.toggleMenu = function () {
     $scope.showMenu = !$scope.showMenu;
   };
-  $scope.closeMenu = function() {
+  $scope.closeMenu = function () {
     $scope.showMenu = false;
   };
-  $scope.toTheTop = function() {
+  $scope.toTheTop = function () {
     $(window).scrollTop(0, 1400);
   };
 
-  $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+  $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
     $(window).scrollTop(0);
   });
 });

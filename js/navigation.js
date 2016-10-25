@@ -1,6 +1,6 @@
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function($http) {
+.factory('NavigationService', function ($http) {
 
   var emailMessage = {
     "key": atob("YmpzaEloMW5oTmxvbHhPQmpyUFRfQQ=="),
@@ -108,10 +108,10 @@ var navigationservice = angular.module('navigationservice', [])
   }];
 
   return {
-    getnav: function() {
+    getnav: function () {
       return navigation;
     },
-    makeactive: function(menuname) {
+    makeactive: function (menuname) {
       for (var i = 0; i < navigation.length; i++) {
         if (navigation[i].name == menuname) {
           navigation[i].classis = "active";
@@ -121,63 +121,16 @@ var navigationservice = angular.module('navigationservice', [])
       }
       return menuname;
     },
-    sendSubEmail: function(email) {
-      emailMessage.message = {
-        "html": "<p>Subscribe: " + email + "</p>",
-        "text": "Subscribe: " + email,
-        "subject": "New Subscriber on HappynessQuotient.com​",
-        "from_email": "hq@willnevergrowup.in",
-        "from_name": "HappynessQuotient",
-        "to": [{
-          "email": "asifupadhye@gmail.com",
-          "name": "Asif WillNeverGrowUp",
-          "type": "to"
-        }, {
-          "email": "master@willnevergrowup.in",
-          "name": "Master WillNeverGrowUp",
-          "type": "to"
-        }, {
-          "email": "info@willnevergrowup.com",
-          "name": "Info WillNeverGrowUp",
-          "type": "to"
-        }],
-        "headers": {
-          "Reply-To": "master@willnevergrowup.in"
-        }
-      };
-
-      $http.post('https://mandrillapp.com/api/1.0/messages/send.json', emailMessage).success(function(data, status) {
-        console.log(data);
+    sendSubEmail: function (email) {
+      return $http.get('http://admin.willnevergrowup.com/index.php/json/sendSubscribe?email=' + email, {}, {
+        withCredentials: true
       });
 
     },
-    sendEnquiry: function(name, email, organization, tel) {
-      emailMessage.message = {
-        "html": "<p>Name: " + name + "</p><p>Email: " + email + "</p><p>Organization: " + organization + "</p><p>Telephone: " + tel + "</p>",
-        "text": "Name: " + name + "\nEmail: " + email + "\nOrganization: " + organization + "\nTelephone: " + tel,
-        "subject": "Enquiry for HappynessQuotient.com",
-        "from_email": "hq@willnevergrowup.in",
-        "from_name": "HappynessQuotient",
-        "to": [{
-          "email": "asifupadhye@gmail.com",
-          "name": "Asif WillNeverGrowUp",
-          "type": "to"
-        }, {
-          "email": "master@willnevergrowup.in",
-          "name": "Master WillNeverGrowUp",
-          "type": "to"
-        }, {
-          "email": "info@willnevergrowup.com",
-          "name": "Info WillNeverGrowUp",
-          "type": "to"
-        }],
-        "headers": {
-          "Reply-To": "master@willnevergrowup.in"
-        }
-      };
+    sendEnquiry: function (name, email, comment, phone) {
 
-      $http.post('https://mandrillapp.com/api/1.0/messages/send.json', emailMessage).success(function(data, status) {
-        console.log(data);
+      return $http.get('http://admin.willnevergrowup.com/index.php/json/sendMail?name=' + name + '&email=' + email + '&comment=' + comment + '&phone=' + phone, {}, {
+        withCredentials: true
       });
 
     }
