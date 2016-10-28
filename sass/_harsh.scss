@@ -227,8 +227,7 @@ a {
 .hq-awesome-guy img,
 .section-six-img img,
 .talk-image img {
-    -webkit-animation: jump 3.5s ease 0s infinite normal;
-    animation: jump 3.5s ease 0s infinite normal;
+    @include transition(all .3s ease);
 }
 
 .nonanim {
@@ -236,38 +235,37 @@ a {
 }
 @keyframes jump {
     0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+      @include transform(translateY(0));
     }
 
     20% {
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
+        @include transform(translateY(-10px));
+
     }
 
     40% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+      @include transform(translateY(0));
+
     }
 
     50% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+      @include transform(translateY(0));
+
     }
 
     60% {
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
+      @include transform(translateY(-10px));
+
     }
 
     80% {
-        -webkit-transform: translateY(-15px);
-        transform: translateY(-15px);
+      @include transform(translateY(0px));
+
     }
 
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+      @include transform(translateY(0));
+
     }
 }
 // Section 4
