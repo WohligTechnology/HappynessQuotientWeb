@@ -22,6 +22,11 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
       templateUrl: "views/template.html",
       controller: 'PackageDetailCtrl'
     })
+    .state('faq', {
+        url: "/faq",
+        templateUrl: "views/template.html",
+        controller: 'FaqCtrl'
+      })
     .state('homeid', {
       url: "/:id",
       templateUrl: "views/template.html",

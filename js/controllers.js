@@ -1,6 +1,6 @@
 var headerController = {};
 
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'duScroll', 'base64'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ngAnimate','ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'duScroll', 'base64'])
 
 .value('duScrollDuration', 1400)
 
@@ -129,6 +129,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
   })
+    .controller('FaqCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
+      $scope.template = TemplateService.changecontent("faq");
+      $scope.menutitle = NavigationService.makeactive("faq");
+      TemplateService.title = $scope.menutitle;
+      $scope.navigation = NavigationService.getnav();
+      $scope.oneAtATime = true;
+
+    })
+
   .controller('PackageDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
     //Used to name the .html file
     $scope.changeURL = function (id, inside) {
