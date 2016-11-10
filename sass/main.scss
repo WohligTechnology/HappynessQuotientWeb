@@ -383,5 +383,10 @@ nav li:hover .dropdown-menu {
     display: inline-block;
     margin-bottom: 15px;
 }
+.hidebordercolor .panel-body{background-color: #ffd61e   !important;}
+.p14{    font-size: 12px;
+    margin-left: 5%;}
+    .panel-body a{color: black !important;
+        font-weight: 400 !important;}
 @import "harsh";
 @import "mobile";
