@@ -357,15 +357,15 @@ nav li:hover .dropdown-menu {
     .circle {
         background: #0084c7;
         position: absolute;
-        width: 46px;
-        height: 46px;
+        width: 63px;
+        height: 63px;
         border-radius: 50%;
         border: 4px solid #eeed3b;
         @include transform(translateX(-25%));
         text-align: center;
-        padding: 12px 0;
+        padding: 21px 0;
         color: #fff;
-        top: 0;
+        top: -1px;
         left: 0;
     }
     .g-circle {
@@ -373,11 +373,15 @@ nav li:hover .dropdown-menu {
     }
 }
 
+.panel-group .panel {
+    margin-bottom: 30px;
+}
+
 .hidebordercolor .panel-heading {
     background-color: #0084c7 !important;
     color: #fff;
     border-radius: 10px;
-    padding: 14px 20px 14px 40px;
+    padding: 22px 22px 22px 58px;
     // border-bottom: 1px solid black !important;
 }
 
@@ -403,9 +407,14 @@ nav li:hover .dropdown-menu {
         min-height: 500px;
         position: relative;
         .inner-section {
-            .contact-txt {
-                margin-top: 60px;
+            .align {
+                display: inline-block;
+                vertical-align: middle;
             }
+            // .contact-txt {
+            //     margin-top: 60px;
+            // }
+            text-align: center;
             width: 100%;
             position: absolute;
             top: 60%;
@@ -436,6 +445,7 @@ nav li:hover .dropdown-menu {
 
 .hidebordercolor i {
     font-size: 22px !important;
+    color: #eeed3b;
 }
 
 .faqimg {
