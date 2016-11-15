@@ -400,12 +400,15 @@ nav li:hover .dropdown-menu {
         top: 0;
     }
     .semi-foot-sec {
-        min-height: 450px;
+        min-height: 500px;
         position: relative;
         .inner-section {
+            .contact-txt {
+                margin-top: 60px;
+            }
             width: 100%;
             position: absolute;
-            top: 50%;
+            top: 60%;
             left: 50%;
             color: #fff;
             @include transform(translate(-50%, -50%));
@@ -428,7 +431,7 @@ nav li:hover .dropdown-menu {
 }
 
 .padimg {
-    padding: 8% 0;
+    padding: 4% 0;
 }
 
 .hidebordercolor i {
@@ -442,12 +445,12 @@ nav li:hover .dropdown-menu {
 }
 
 .padp {
-    color: #01b59c;
-    font-size: 25px;
+    color: #000;
+    font-size: 30px;
     font-family: sans-serif;
     // border-bottom: 1px solid;
     // display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .hidebordercolor .panel-body {
