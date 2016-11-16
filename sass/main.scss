@@ -371,6 +371,10 @@ nav li:hover .dropdown-menu {
     .g-circle {
         background: #00ac94;
     }
+    .panel-body {
+        // border-bottom-right-radius: 20px;
+        @include border-bottom-radius(20px);
+    }
 }
 
 .panel-group .panel {
@@ -380,15 +384,34 @@ nav li:hover .dropdown-menu {
 .hidebordercolor .panel-heading {
     background-color: #0084c7 !important;
     color: #fff;
-    border-radius: 10px;
-    padding: 22px 22px 22px 58px;
+    border-radius: 20px;
+    padding: 0;
+    // padding: 22px 22px 22px 58px;
     // border-bottom: 1px solid black !important;
+    .head-title {
+        padding: 22px 22px 22px 58px;
+    }
 }
 
 .altn-tab .panel-heading {
     background-color: #00ac94 !important;
 }
 
+.panel-open {
+    .panel-heading {
+        @include border-bottom-radius(0px);
+    }
+}
+
+// .panel-group {
+//     .hidebordercolor {
+//         .panel-heading {
+//             &:nth-child(odd) {
+//                 background-color: #0084c7;
+//             }
+//         }
+//     }
+// }
 // .padfaq {
 //     padding: 1% 14%;
 // }
