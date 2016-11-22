@@ -437,6 +437,9 @@
 }
 
 @media (max-width: 400px) {
+  .faqimg {
+    width: 200px !important;
+  }
   .hidebordercolor .g-circle {
     background: #00ac94 !important;
   }
