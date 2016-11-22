@@ -375,10 +375,27 @@ nav li:hover .dropdown-menu {
         // border-bottom-right-radius: 20px;
         @include border-bottom-radius(20px);
     }
+    .char {
+        opacity: 0;
+        position: absolute;
+        right: -100px;
+        top: -55px;
+        width: 150px;
+        z-index: -1;
+        @include transition(all ease 300ms);
+        &.active {
+            opacity: 1;
+        }
+    }
+    .char9 {
+        @extend .char;
+        right: -130px;
+    }
 }
 
 .panel-group .panel {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    z-index: 99;
 }
 
 .hidebordercolor .panel-heading {
@@ -417,6 +434,9 @@ nav li:hover .dropdown-menu {
 // }
 .bg-cont {
     background: #eeed3b;
+    .acc-faq {
+        padding: 0 74px;
+    }
 }
 
 .semi-foot {
@@ -489,6 +509,8 @@ nav li:hover .dropdown-menu {
 .hidebordercolor .panel-body {
     background-color: #0084c7 !important;
     color: #fff;
+    border-top: transparent !important;
+    padding: 10px 58px;
 }
 
 .altn-tab .panel-body {

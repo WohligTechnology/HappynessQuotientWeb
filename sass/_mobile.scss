@@ -31,6 +31,9 @@
 
 @media (max-width: $screen-sm-max) {
   // Faq page
+  .hidebordercolor .g-circle {
+    background: #00ac94 !important;
+  }
   .acc-faq {
     padding: 5px 15px;
   }
@@ -184,6 +187,9 @@
 
 @media (max-width: $screen-xs-max) {
   // Faq page
+  .acc-faq {
+    padding: 0 20px;
+  }
   .fa.pull-right {
     margin-left: 0;
     display: none;
@@ -192,8 +198,8 @@
     .circle {
       background: #0084c7;
       position: absolute;
-      width: 63px;
-      height: 63px;
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
       border: 4px solid #eeed3b;
       @include transform(translateY(-50%));
@@ -431,6 +437,21 @@
 }
 
 @media (max-width: 400px) {
+  .hidebordercolor .g-circle {
+    background: #00ac94 !important;
+  }
+  .hidebordercolor {
+    .panel-body {
+      padding: 15px 10px 15px 58px;
+    }
+  }
+  .hidebordercolor .panel-heading .head-title {
+    padding: 22px 22px 22px 58px;
+    font-size: 12px;
+  }
+  .bg-cont .acc-faq {
+    padding: 0 20px;
+  }
   .logo {
     width: 150px !important;
   }
