@@ -387,10 +387,10 @@ nav li:hover .dropdown-menu {
             opacity: 1;
         }
     }
-    .char9 {
-        @extend .char;
-        right: -130px;
-    }
+    // .char9 {
+    //     @extend .char;
+    //     right: -130px;
+    // }
 }
 
 .panel-group .panel {
