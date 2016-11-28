@@ -82,6 +82,12 @@ var navigationservice = angular.module('navigationservice', [])
     target: "_self",
     subnav: []
   }, {
+    name: "Faq's",
+    classis: "active",
+    sref: "faq",
+    target: "_self",
+    subnav: []
+  },  {
     name: "Visit Never Grow Up®",
     classis: "active",
     link: "http://www.willnevergrowup.com/",
