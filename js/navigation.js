@@ -106,7 +106,7 @@ var navigationservice = angular.module('navigationservice', [])
     target: "_self",
     subnav: []
   },{
-    name: "FAQ'S",
+    name: "FAQs",
     classis: "active",
     sref: "faq",
     target: "_self",
