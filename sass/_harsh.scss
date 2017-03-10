@@ -77,6 +77,7 @@ a {
 
 .btn-yblue {
     @include button-variant($brand-blue, $brand-primary, $brand-primary);
+    margin: 0 4px;
 }
 
 .btn-pink2 {
