@@ -84,6 +84,11 @@ a {
     @include button-variant(white, $brand-danger, $brand-danger);
 }
 
+.btn-green1 {
+    background: $brand-primary !important;
+    color: #00ac93 !important;
+}
+
 // Section 2
 .hq-features {
     .inner-about {
