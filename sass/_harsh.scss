@@ -290,12 +290,10 @@ a {
             tr {
                 &:nth-child(odd) {
                     background-color: lighten($brand-success, 5%);
-                }
-                // border-bottom: 2px solid darken($brand-success, 2%);
+                } // border-bottom: 2px solid darken($brand-success, 2%);
                 td {
                     padding: 15px 10px;
-                    letter-spacing: 1px;
-                    // border-right: 2px solid darken($brand-success, 2%);
+                    letter-spacing: 1px; // border-right: 2px solid darken($brand-success, 2%);
                     &:first-child {
                         padding-left: 20px;
                     }
@@ -533,7 +531,7 @@ footer {
         margin: 0 auto;
         font-size: 12px;
         p {
-            padding: 0 90px;
+            padding: 0 60px;
         }
         hr {
             border-color: black;
