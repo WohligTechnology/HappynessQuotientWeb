@@ -4,16 +4,15 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
-
 /* Bootstrap Variables Goes Here */
-
 $brand-primary: #ffd61e !default;
 $brand-success: #00ac93 !default;
 $brand-danger: #f55069 !default;
 $brand-info: #000072 !default;
 $brand-warning: #ffec39 !default;
 $brand-blue: #0084c8 !default;
-$body-bg: #fff !default; // $text-color: $gray-base !default;
+$body-bg: #fff !default;
+$brand-yellow:#fee61d; // $text-color: $gray-base !default;
 // $link-color: $gray-base !default;
 // $link-hover-color: $gray-base !default;
 $link-hover-decoration: none !default;
@@ -32,6 +31,7 @@ $border-radius-large: 0 !default;
 $border-radius-small: 0 !default;
 $select-height: 34px !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
 body {
     -webkit-font-smoothing: antialiased;
 }
@@ -71,15 +71,14 @@ nav li:hover .dropdown-menu {
     margin: 30px 0;
 }
 
-
 /* Start writing sass here */
-
 .section {
     position: relative;
 }
 
 .light {
     color: white;
+
     &:focus,
     &:hover {
         color: white;
@@ -88,6 +87,7 @@ nav li:hover .dropdown-menu {
 
 .dark {
     color: black;
+
     &:focus,
     &:hover {
         color: black;
@@ -96,6 +96,7 @@ nav li:hover .dropdown-menu {
 
 .primary {
     color: $brand-primary;
+
     &:focus,
     &:hover {
         color: $brand-primary;
@@ -104,6 +105,7 @@ nav li:hover .dropdown-menu {
 
 .brand-blue {
     color: $brand-blue;
+
     &:focus,
     &:hover {
         color: $brand-blue;
@@ -112,6 +114,7 @@ nav li:hover .dropdown-menu {
 
 .danger {
     color: $brand-danger;
+
     &:focus,
     &:hover {
         color: $brand-danger;
@@ -120,6 +123,7 @@ nav li:hover .dropdown-menu {
 
 .warning {
     color: $brand-warning;
+
     &:focus,
     &:hover {
         color: $brand-warning;
@@ -128,6 +132,7 @@ nav li:hover .dropdown-menu {
 
 .success {
     color: $brand-success;
+
     &:focus,
     &:hover {
         color: $brand-success;
@@ -148,6 +153,7 @@ nav li:hover .dropdown-menu {
 
 .bg-success {
     background-color: $brand-success;
+
     &:focus {
         background-color: $brand-success !important;
     }
@@ -168,6 +174,7 @@ nav li:hover .dropdown-menu {
 .happy-people {
     margin: 50px auto 0;
     max-width: 1170px;
+
     img {
         width: 75%;
     }
@@ -186,6 +193,7 @@ nav li:hover .dropdown-menu {
     bottom: 50px;
     left: calc(50% - 5px);
     z-index: 1;
+
     i {
         font-size: 30px;
     }
@@ -194,19 +202,23 @@ nav li:hover .dropdown-menu {
 .menu {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: -50%;
+    width: 25%;
+    height: 100%;
     z-index: 999;
-    background-color: $brand-primary;
+    background-color: #ffd61e;
     text-align: center;
     color: white;
     font-size: 22px;
     padding: 30px 0;
     @include transition(all 300ms ease);
-    @include transform(translateY(-100%));
+    @include transform(translateX(-100%));
+
     &.show {
-        @include transform(translateY(0));
+        @include transform(translateX(0));
+        right: 0%;
     }
+
     a {
         color: white;
         padding: 10px 0;
@@ -216,6 +228,7 @@ nav li:hover .dropdown-menu {
         margin: 0 auto;
         font-size: 18px;
         @include transition(all 300ms ease);
+
         &.active {
             color: $brand-danger;
         }
@@ -234,21 +247,26 @@ nav li:hover .dropdown-menu {
     border-radius: 100%;
     cursor: pointer;
     text-align: center;
+
     .hide-it {
         opacity: 0;
     }
+
     .show-it {
         opacity: 1;
     }
+
     i.fa-angle-up {
         color: white;
         font-size: 35px;
         line-height: 23px;
     }
+
     &.bottom {
         top: auto;
         bottom: 35px;
     }
+
     .bar {
         display: block;
         height: 2px;
@@ -263,9 +281,11 @@ nav li:hover .dropdown-menu {
     .bar2 {
         opacity: 0;
     }
+
     .bar1 {
         transform: rotate(45deg) translate(4px, 6px);
     }
+
     .bar3 {
         transform: rotate(-45deg) translate(4px, -6px);
     }
@@ -275,6 +295,7 @@ nav li:hover .dropdown-menu {
     position: absolute;
     left: 0;
     bottom: 0;
+
     img {
         vertical-align: top;
     }
@@ -284,6 +305,7 @@ nav li:hover .dropdown-menu {
     position: absolute;
     left: 0;
     top: 0;
+
     img {
         vertical-align: top;
     }
@@ -344,6 +366,7 @@ nav li:hover .dropdown-menu {
     .panel {
         background: transparent;
     }
+
     .panel-default {
         border-color: transparent;
     }
@@ -354,6 +377,7 @@ nav li:hover .dropdown-menu {
 // }
 .hidebordercolor {
     position: relative;
+
     .circle {
         background: #0084c7;
         position: absolute;
@@ -368,13 +392,16 @@ nav li:hover .dropdown-menu {
         top: -1px;
         left: 0;
     }
+
     .g-circle {
         background: #00ac94;
     }
+
     .panel-body {
         // border-bottom-right-radius: 20px;
         @include border-bottom-radius(20px);
     }
+
     .char {
         opacity: 0;
         position: absolute;
@@ -383,10 +410,12 @@ nav li:hover .dropdown-menu {
         width: 150px;
         z-index: -1;
         @include transition(all ease 300ms);
+
         &.active {
             opacity: 1;
         }
     }
+
     // .char9 {
     //     @extend .char;
     //     right: -130px;
@@ -394,7 +423,7 @@ nav li:hover .dropdown-menu {
 }
 
 .panel-group .panel {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     z-index: 99;
 }
 
@@ -403,6 +432,7 @@ nav li:hover .dropdown-menu {
     color: #fff;
     border-radius: 20px;
     padding: 0;
+
     // padding: 22px 22px 22px 58px;
     // border-bottom: 1px solid black !important;
     .head-title {
@@ -433,7 +463,8 @@ nav li:hover .dropdown-menu {
 //     padding: 1% 14%;
 // }
 .bg-cont {
-    background: #eeed3b;
+    background: $brand-yellow;
+
     .acc-faq {
         padding: 0 74px;
     }
@@ -442,18 +473,22 @@ nav li:hover .dropdown-menu {
 .semi-foot {
     background: #00ac94;
     position: relative;
+
     .right-green {
         position: absolute;
         top: 0;
     }
+
     .semi-foot-sec {
         min-height: 500px;
         position: relative;
+
         .inner-section {
             .align {
                 display: inline-block;
                 vertical-align: middle;
             }
+
             // .contact-txt {
             //     margin-top: 60px;
             // }
@@ -464,14 +499,17 @@ nav li:hover .dropdown-menu {
             left: 50%;
             color: #fff;
             @include transform(translate(-50%, -50%));
+
             h3 {
                 margin-bottom: 40px;
             }
+
             .contact {
                 p {
                     font-size: 20px;
                     text-align: center;
                     margin: 0;
+
                     a {
                         font-size: 20px;
                         color: #eeed3b;
@@ -496,9 +534,11 @@ nav li:hover .dropdown-menu {
     width: 300px !important;
     margin: 0 auto;
 }
-.home-logo{
+
+.home-logo {
     width: 300px;
 }
+
 .padp {
     color: #000;
     font-size: 30px;
@@ -530,4 +570,5 @@ nav li:hover .dropdown-menu {
 }
 
 @import "harsh";
+@import "new";
 @import "mobile";

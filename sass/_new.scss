@@ -1,0 +1,32 @@
+.bg-home-one {
+    background-color: $brand-yellow;
+
+    &:focus {
+        background-color: $brand-yellow !important;
+    }
+}
+
+.iphone {
+    position: relative;
+
+    .iphone1 {
+        position: absolute;
+        width: 50%;
+        left: 20%;
+        top: -40px;
+    }
+
+    .iphone2 {
+        position: absolute;
+        width: 50%;
+        right: 0%;
+    }
+}
+
+.different-img {
+    img {
+        width: 30%;
+        padding: 25px 0;
+        margin: 0 auto;
+    }
+}
