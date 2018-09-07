@@ -43,6 +43,30 @@
 }
 
 @media (max-width: $screen-sm-max) {
+  .faqimg {
+    width: 200px !important;
+  }
+
+  .bg-home-one {
+    min-height: 500px !important;
+  }
+
+  .btn,
+  a,
+  p,
+  span,
+  table tr td {
+    font-size: 13px;
+  }
+
+  .btn-yblue {
+    margin: 4px;
+  }
+
+  .hq-features .hq-about .about-buttons {
+    margin-top: 50px;
+  }
+
   .menu {
     right: -100%;
     width: 50%;
@@ -70,7 +94,15 @@
   }
 
   .iphone .iphone2 {
-    top: 30px;
+    top: 100px;
+    width: 50%;
+    right: 5%;
+  }
+
+  .iphone .iphone1 {
+    top: 50px;
+    width: 50%;
+    left: 20%;
   }
 
   .acc-faq {
@@ -259,9 +291,19 @@
 }
 
 @media (max-width: $screen-xs-max) {
+  .iphone .iphone1 {
+    top: 0;
+    width: 35%;
+    left: 20%;
+  }
+
   .menu {
     right: -120%;
     width: 60%;
+  }
+
+  .home-logo {
+    width: 200px;
   }
 
   .menu a {
@@ -269,9 +311,19 @@
     max-width: 200px;
   }
 
+  .iphone .iphone2 {
+    top: 30px;
+    width: 35%;
+    right: 20%;
+  }
+
+  .iphone {
+    min-height: 300px;
+  }
+
   // Faq page
   .faqimg {
-    width: 210px !important;
+    width: 180px !important;
   }
 
   .acc-faq {
@@ -300,6 +352,10 @@
     }
   }
 
+  .social-links1 {
+    margin-top: 0px;
+  }
+
   .semi-foot {
     .semi-foot-sec {
 
@@ -311,7 +367,7 @@
         }
 
         img {
-          width: 60%;
+          width: 40% !important;
         }
 
         .contact {

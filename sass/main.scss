@@ -5,14 +5,14 @@
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
 /* Bootstrap Variables Goes Here */
-$brand-primary: #fee61d !default;
+$brand-primary: #ffc107 !default;
 $brand-success: #00ac93 !default;
 $brand-danger: #f55069 !default;
 $brand-info: #000072 !default;
-$brand-warning: #ffec39 !default;
+$brand-warning: #ffc107 !default;
 $brand-blue: #0084c8 !default;
 $body-bg: #fff !default;
-$brand-yellow:#fee61d; // $text-color: $gray-base !default;
+$brand-yellow:#ffc107; // $text-color: $gray-base !default;
 // $link-color: $gray-base !default;
 // $link-hover-color: $gray-base !default;
 $link-hover-decoration: none !default;
@@ -62,6 +62,10 @@ nav li:hover .dropdown-menu {
     @include transition(all 300ms ease);
 }
 
+.social-links1 {
+    margin-top: -45px;
+}
+
 .btn-blue {
     @include button-variant($brand-primary, $brand-blue, $brand-blue);
 }
@@ -69,6 +73,10 @@ nav li:hover .dropdown-menu {
 .btn.btn-strong {
     padding: 2px 10px;
     margin: 30px 0;
+}
+
+.min-height-two {
+    min-height: 500px;
 }
 
 /* Start writing sass here */
@@ -384,7 +392,7 @@ nav li:hover .dropdown-menu {
         width: 63px;
         height: 63px;
         border-radius: 50%;
-        border: 4px solid #eeed3b;
+        border: 4px solid $brand-primary;
         @include transform(translateX(-25%));
         text-align: center;
         padding: 21px 0;
@@ -480,13 +488,17 @@ nav li:hover .dropdown-menu {
     }
 
     .semi-foot-sec {
-        min-height: 500px;
+        min-height: 320px;
         position: relative;
 
         .inner-section {
             .align {
                 display: inline-block;
                 vertical-align: middle;
+
+                img {
+                    width: 65%;
+                }
             }
 
             // .contact-txt {
@@ -512,7 +524,7 @@ nav li:hover .dropdown-menu {
 
                     a {
                         font-size: 20px;
-                        color: #eeed3b;
+                        color: $brand-primary;
                     }
                 }
             }
@@ -526,7 +538,7 @@ nav li:hover .dropdown-menu {
 
 .hidebordercolor i {
     font-size: 22px !important;
-    color: #eeed3b;
+    color: $brand-primary;
 }
 
 .faqimg {
