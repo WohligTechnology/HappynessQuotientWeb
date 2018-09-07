@@ -9,7 +9,7 @@ $brand-primary: #ffc107 !default;
 $brand-success: #00ac93 !default;
 $brand-danger: #f55069 !default;
 $brand-info: #000072 !default;
-$brand-warning: #ffc107 !default;
+$brand-warning: #fee61d !default;
 $brand-blue: #0084c8 !default;
 $body-bg: #fff !default;
 $brand-yellow:#ffc107; // $text-color: $gray-base !default;
@@ -63,7 +63,7 @@ nav li:hover .dropdown-menu {
 }
 
 .social-links1 {
-    margin-top: -45px;
+    margin-top: -40px;
 }
 
 .btn-blue {
@@ -524,7 +524,7 @@ nav li:hover .dropdown-menu {
 
                     a {
                         font-size: 20px;
-                        color: $brand-primary;
+                        color: $brand-warning;
                     }
                 }
             }
