@@ -43,12 +43,20 @@
 }
 
 @media (max-width: $screen-sm-max) {
+  .store-main .inner-store {
+    margin-bottom: 60px;
+  }
+
   .faqimg {
     width: 200px !important;
   }
 
   .bg-home-one {
     min-height: 500px !important;
+  }
+
+  .social-links1 {
+    margin-top: 0;
   }
 
   .btn,
@@ -291,9 +299,49 @@
 }
 
 @media (max-width: $screen-xs-max) {
+  .panel-group .panel {
+    margin-bottom: 25px
+  }
+
+  .store-main .inner-store {
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+
+  .store-table,
+  .store-logo {
+    margin: 10px 0;
+  }
+
+  .padp {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .section-six .hq-reports {
+    padding: 50px 70px 20px 70px;
+  }
+
+  .section-five,
+  .section-four {
+    padding-bottom: 55px;
+  }
+
+  .hq-image {
+    margin-bottom: 0px;
+  }
+
+  .centralize {
+    top: 52%;
+  }
+
+  .section-four {
+    padding-bottom: 0px;
+  }
+
   .iphone .iphone1 {
     top: 0;
-    width: 35%;
+    width: 30%;
     left: 20%;
   }
 
@@ -313,12 +361,12 @@
 
   .iphone .iphone2 {
     top: 30px;
-    width: 35%;
-    right: 20%;
+    width: 30%;
+    right: 25%;
   }
 
   .iphone {
-    min-height: 300px;
+    min-height: 260px;
   }
 
   // Faq page
@@ -391,6 +439,7 @@
     height: 36px;
     width: 36px;
     padding-top: 5px;
+    background: transparent;
 
     .bar {
       width: 18px;
@@ -409,7 +458,7 @@
   .section-two {
     @include position(relative, 0 0 0 0);
     @include transform(translate(0, 0));
-    padding: 50px 20px;
+    padding: 40px 20px;
 
     .hq-about {
       .about-buttons {
@@ -459,14 +508,14 @@
     }
 
     .hq-store-blog {
-      padding: 20% 0;
+      padding: 3% 0;
     }
   }
 
   // Section 5
   .section-five {
     h2 {
-      margin: 50px 0;
+      margin: 50px 0 0px;
       font-size: 14px;
     }
 
