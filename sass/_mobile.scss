@@ -356,7 +356,7 @@
 
   .menu a {
     font-size: 12px;
-    max-width: 200px;
+    max-width: 175px;
   }
 
   .iphone .iphone2 {
@@ -401,7 +401,7 @@
   }
 
   .social-links1 {
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   .semi-foot {
@@ -645,7 +645,7 @@
       width: 90%;
 
       p {
-        padding: 0 10px;
+        padding: 10px 10px 0 10px;
       }
     }
   }
@@ -828,6 +828,10 @@
 @media (max-width: $screen-sm-max) and (orientation: landscape) {
   .btn.btn-strong {
     margin: 00px 0;
+  }
+
+  .bg-home-one {
+    min-height: 600px;
   }
 
   .section.one {
