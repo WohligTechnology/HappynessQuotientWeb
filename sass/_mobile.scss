@@ -831,7 +831,7 @@
   }
 
   .bg-home-one {
-    min-height: 600px;
+    min-height: 600px !important;
   }
 
   .section.one {
@@ -960,5 +960,11 @@
         margin-bottom: 10px;
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .bg-home-one {
+    min-height: 600px !important;
   }
 }
