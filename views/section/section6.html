@@ -45,7 +45,8 @@
                   <div class="form-group">
                     <label class="col-sm-3 light" for="name">Name:</label>
                     <div class="col-sm-9">
-                      <input class="form-control light" id="name" name="name" ng-model="enquiry.name" required type="text">
+                      <input class="form-control light" id="name" name="name" ng-model="enquiry.name" required type="text"
+                        only-letters-input>
                       <div class="enquiryValidation" ng-show="enquiryForm.name.$invalid && enquiryForm.name.$touched"
                         role="alert">
                         Please enter your name.
@@ -56,7 +57,8 @@
                   <div class="form-group">
                     <label class="col-sm-3 light" for="name">Email:</label>
                     <div class="col-sm-9">
-                      <input class="form-control light" required id="name" name="email" ng-model="enquiry.email" type="email">
+                      <input class="form-control light" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required
+                        id="name" name="email" ng-model="enquiry.email" type="email">
                       <div class="enquiryValidation" ng-show="enquiryForm.email.$invalid && enquiryForm.email.$touched"
                         role="alert">
                         Please enter a valid email address.
@@ -77,7 +79,8 @@
                   <div class="form-group">
                     <label class="col-sm-3 light" for="name">Phone:</label>
                     <div class="col-sm-9">
-                      <input class="form-control light" required id="name" name="tel" ng-model="enquiry.tel" type="text">
+                      <input class="form-control light" required id="name" name="tel" ng-model="enquiry.tel" type="text"
+                        only-digits>
                       <div class="enquiryValidation" ng-show="enquiryForm.tel.$invalid && enquiryForm.tel.$touched"
                         role="alert">
                         Please enter telephone number.
