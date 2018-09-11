@@ -2,14 +2,16 @@ var headerController = {};
 
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ngAnimate', 'ui.bootstrap', 'ngSanitize', 'angular-flexslider', 'duScroll', 'base64'])
 
-.value('duScrollDuration', 1400)
+  .value('duScrollDuration', 1400)
 
-.controller('HomeCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location, $uibModal, $base64) {
+  .controller('HomeCtrl', function ($scope, $state, TemplateService, NavigationService, $timeout, $stateParams, $document, $location, $uibModal, $base64) {
     //Used to name the .html file
     $scope.template = TemplateService.changecontent("home");
     $scope.menutitle = NavigationService.makeactive("Home");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.inside = 'unique';
+    // $scope.measure = false;
 
     function makeAnimation(id) {
       if (!_.isEmpty(id)) {
@@ -27,16 +29,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     function forInside(id, inside) {
       if (!_.isEmpty(inside) && !_.isEmpty(id) && id == "happyness") {
-        switch (inside) {
-          case "unique":
-            $scope.measure = false;
-            $scope.unique = true;
-            break;
-          case "measure":
-            $scope.measure = true;
-            $scope.unique = false;
-            break;
-        }
+        console.log("hello inside", inside)
+        $scope.inside = inside;
+        // switch (inside) {
+        //   case "unique":
+        //     $scope.measure = false;
+        //     $scope.unique = true;
+        //     break;
+        //   case "measure":
+        //     $scope.measure = true;
+        //     $scope.unique = false;
+        //     break;
+        // }
       }
       if (!_.isEmpty(inside) && !_.isEmpty(id) && id == "contact") {
         switch (inside) {
@@ -88,10 +92,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
     $scope.changeMeasure = function (val) {
-      $scope.measure = val;
+      $scope.inside = val;
+
+
     };
     $scope.changeUnique = function (val) {
-      $scope.unique = val;
+      $scope.inside = val;
+
+
     };
 
     $scope.section = {
@@ -146,7 +154,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
   })
 
-.controller('PackageDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
+  .controller('PackageDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
     //Used to name the .html file
     $scope.changeURL = function (id, inside) {
       if (inside) {
@@ -171,26 +179,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
   })
 
-.controller('VideoCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
+  .controller('VideoCtrl', function ($scope, TemplateService, NavigationService, $timeout, $location) {
 
-})
+  })
 
-.controller('headerctrl', function ($scope, TemplateService) {
-  headerController = $scope;
-  $scope.template = TemplateService;
+  .controller('headerctrl', function ($scope, TemplateService) {
+    headerController = $scope;
+    $scope.template = TemplateService;
 
-  $scope.showMenu = false;
-  $scope.toggleMenu = function () {
-    $scope.showMenu = !$scope.showMenu;
-  };
-  $scope.closeMenu = function () {
     $scope.showMenu = false;
-  };
-  $scope.toTheTop = function () {
-    $(window).scrollTop(0, 1400);
-  };
+    $scope.toggleMenu = function () {
+      $scope.showMenu = !$scope.showMenu;
+    };
+    $scope.closeMenu = function () {
+      $scope.showMenu = false;
+    };
+    $scope.toTheTop = function () {
+      $(window).scrollTop(0, 1400);
+    };
 
-  $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-    $(window).scrollTop(0);
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+      $(window).scrollTop(0);
+    });
   });
-});

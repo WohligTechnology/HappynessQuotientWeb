@@ -13,7 +13,7 @@
             </div>
           </div>
           <div class="col-md-8 col-sm-8 col-xs-12">
-            <div class="hq-about" ng-hide="measure || unique">
+            <div class="hq-about" ng-if="inside=='unique'">
               <h2 class="text-left warning">What's Happyness Quotient all about?</h2>
               <p class="text-justify light">Happyness Quotient<sup>TM</sup> is an
                 <span class="text-bold warning pointer" ng-click="changeURL('services')">innovative</span> and
@@ -37,16 +37,16 @@
                 <span class="text-bold">what matters to your company.</span>
               </p>
               <div class="about-buttons">
-                <button type="button" class="btn btn-yblue" ng-click="changeMeasure(true)">Why Measure Happyness?</button>
+                <button type="button" class="btn btn-yblue" ng-click="changeMeasure('measure')">Why Measure Happyness?</button>
                 <button type="button" class="btn btn-yblue" ng-click="changeURL('hqisunique')">What's Unique about
                   Happyness
                   Quotient?</button>
               </div>
               <!-- <div class="about-image">
-                <img src="img/section2/1.png" alt="" class="img-responsive" />
-              </div> -->
+                  <img src="img/section2/1.png" alt="" class="img-responsive" />
+                </div> -->
             </div>
-            <div class="about-one" ng-show="measure ">
+            <div class="about-one" ng-if="inside=='measure'">
               <h2 class="primary">Why measure Happyness?</h2>
               <p class="text-justify light">With an ever evolving workforce and increasing competition, measuring
                 engagement levels alone may no longer
@@ -68,7 +68,7 @@
                 them
                 stay ahead of the curve.
               </p>
-              <button type="button" class="btn btn-yblue" ng-click="changeMeasure(false)">Back</button>
+              <button type="button" class="btn btn-yblue" ng-click="changeMeasure('unique')">Back</button>
               <!-- <div class="about-one-image">
                 <img src="img/section2/2.png" alt="" class="img-responsive" />
               </div> -->
