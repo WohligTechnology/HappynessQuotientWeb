@@ -103,11 +103,11 @@ nav li:hover .dropdown-menu {
 }
 
 .primary {
-    color: $brand-primary;
+    color: $brand-warning;
 
     &:focus,
     &:hover {
-        color: $brand-primary;
+        color: $brand-warning;
     }
 }
 
