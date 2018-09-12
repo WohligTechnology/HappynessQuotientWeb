@@ -5,7 +5,6 @@ w/
 *.tar
 production/
 *.zip
-css/
 img2/
 production/.DS_Store
 happynessquotient/
